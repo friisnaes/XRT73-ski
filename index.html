@@ -489,16 +489,19 @@ section{padding:clamp(70px,12vh,150px) var(--pad);position:relative;z-index:4}
 .step p{margin:0;font-size:15.5px;line-height:1.65;color:var(--mute)}
 .step p b{color:var(--snow);font-weight:500}
 
-/* villages */
+/* villages — 7 byer + en opsummering = 8 felter, så gitteret altid går op: 4×2, 2×4, 1×8 */
 .villages{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;
   background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden;
   margin-bottom:clamp(30px,4.5vh,54px);
 }
+@media (max-width:1000px){.villages{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:429px){.villages{grid-template-columns:1fr}}
 .vill{background:var(--night);padding:clamp(18px,2.2vw,24px);position:relative}
 .vill b{
-  display:block;font-family:var(--display);font-size:clamp(20px,2.4vw,28px);
+  display:block;font-family:var(--display);font-size:clamp(20px,2.4vw,30px);
   text-transform:uppercase;letter-spacing:.015em;line-height:1.05;
+  overflow-wrap:break-word;
 }
 .vill span{
   display:block;font-family:var(--mono);font-size:var(--fs-mono-xs);letter-spacing:.14em;
@@ -510,6 +513,8 @@ section{padding:clamp(70px,12vh,150px) var(--pad);position:relative;z-index:4}
   content:'';position:absolute;inset:0 0 auto 0;height:2px;
   background:linear-gradient(90deg,var(--brass),rgba(208,171,99,0));
 }
+.vill.sum{background:#0A1017}
+.vill.sum b{color:var(--ice)}
 
 /* numbers */
 .tal{display:grid;grid-template-columns:repeat(auto-fit,minmax(166px,1fr));gap:1px;background:var(--line)}
@@ -718,7 +723,7 @@ footer{
 <!-- ══════════ TICKER ══════════ -->
 <div class="ticker" aria-hidden="true">
   <div class="rail" id="rail">
-    <span>Chauffør fra München</span><span>Bilfri ankomst</span><span>Ski-in / ski-out</span>
+    <span>Chauffør fra Zürich</span><span>Bilfri ankomst</span><span>Ski-in / ski-out</span>
     <span>Skileje i kælderen</span><span>Eisbar No.1</span><span>1.550 m² spa</span>
     <span>300 km piste</span><span>5-retters gourmet</span><span>Rørt tatar på terrassen</span>
     <span>Der Weiße Ring</span><span>Kriegeralpe · 2.000 m</span><span>Mooserwirt</span>
@@ -741,13 +746,13 @@ footer{
     <article class="man capo">
       <div class="mono">KK</div>
       <h3>Kim<small>Kehlet Johansen</small></h3>
-      <div class="role">Capo di tutti capi<br>· Transportchef</div>
+      <div class="role">Capo di tutti capi<br>&amp; transportchef</div>
       <div class="rm" data-rm>Værelse —</div>
     </article>
     <article class="man capo">
       <div class="mono">TF</div>
       <h3>Thomas<small>Friisnæs</small></h3>
-      <div class="role">Capo<br>· Hotelchef</div>
+      <div class="role">Capo<br>&amp; hotelchef</div>
       <div class="rm" data-rm>Værelse —</div>
     </article>
     <article class="man">
@@ -783,7 +788,7 @@ footer{
     <article class="man">
       <div class="mono">MS</div>
       <h3>Michael<small>Steffens</small></h3>
-      <div class="role">Fotografissimius<br>· Lægeekspert</div>
+      <div class="role">Fotografissimius<br>&amp; lægeekspert</div>
       <div class="rm" data-rm>Værelse —</div>
     </article>
   </div>
@@ -884,13 +889,13 @@ footer{
   <div class="arrive rv">
     <div class="step">
       <div class="i">01 — Fly</div>
-      <h5>København → München</h5>
-      <p>Ca. <b>1 t 40 min</b> i luften. München er nærmeste store lufthavn med gode danske afgange.</p>
+      <h5>København → Zürich</h5>
+      <p>Ca. <b>1 t 50 min</b> i luften. Zürich er den korteste vej til Arlberg — en time nærmere ad landevejen end München.</p>
     </div>
     <div class="step">
       <div class="i">02 — Chauffør</div>
-      <h5>München → Lech</h5>
-      <p><b>243 km, ca. 3 timer</b> — vi har chauffør begge veje, så ingen skal parkere. Ruten går via Kufstein/Inndalen eller Memmingen–Lindau; Warth-passet er lukket om vinteren.</p>
+      <h5>Zürich → Lech</h5>
+      <p><b>196 km, ca. 2 timer</b> — vi har chauffør begge veje, så ingen skal parkere. Ruten går via Feldkirch og Klostertal og op over Flexenpasset.</p>
     </div>
     <div class="step">
       <div class="i">03 — Dalstationen</div>
@@ -910,18 +915,20 @@ footer{
   <div class="head rv">
     <div class="num">03 — Området</div>
     <div>
-      <h2>Warth til<br>St. Anton.<br><em>Ét liftkort.</em></h2>
-      <p>Seks byer hænger sammen i ét system — siden Flexenbahn åbnede i 2016 kan man køre hele vejen fra Warth til St. Anton uden at sætte støvlerne i en bus. Vi bor i midten, i <b>Oberlech</b>, med pisten uden for døren.</p>
+      <h2>Schröcken til<br>St. Anton.<br><em>Ét liftkort.</em></h2>
+      <p>Syv byer hænger sammen i ét system. Auenfeldjet koblede Lech til Warth-Schröcken i 2013, og Flexenbahn lukkede hullet til St. Anton i 2016 — siden har man kunnet køre hele vejen fra nordenden til St. Anton uden at sætte støvlerne i en bus. Vi bor i midten, i <b>Oberlech</b>, med pisten uden for døren.</p>
     </div>
   </div>
 
   <div class="villages rv">
-    <div class="vill"><b>Warth</b><span>1.495 m · nordspidsen</span></div>
+    <div class="vill"><b>Schröcken</b><span>1.269 m · laveste punkt</span></div>
+    <div class="vill"><b>Warth</b><span>1.495 m · nordenden</span></div>
     <div class="vill base"><b>Oberlech</b><span>1.650 m · base camp</span></div>
     <div class="vill"><b>Lech</b><span>1.450 m · nede i dalen</span></div>
     <div class="vill"><b>Zürs</b><span>1.720 m · over trægrænsen</span></div>
     <div class="vill"><b>St. Christoph</b><span>1.800 m · højest af byerne</span></div>
     <div class="vill"><b>St. Anton</b><span>1.300 m · og Mooserwirt</span></div>
+    <div class="vill sum"><b>Ét liftkort</b><span>Ski Arlberg · 300 km piste</span></div>
   </div>
 
   <div class="tal rv" id="tal-grid">
@@ -929,8 +936,8 @@ footer{
     <div><div class="v" data-to="200" data-suf=" km">0</div><div class="k">Off-piste &amp; ruter</div></div>
     <div><div class="v" data-to="85">0</div><div class="k">Lifte &amp; svævebaner</div></div>
     <div><div class="v" data-to="2811" data-sep="1">0<u>m</u></div><div class="k">Valluga · højeste punkt</div></div>
-    <div><div class="v" data-to="1450" data-sep="1">0<u>m</u></div><div class="k">Lavest fra Oberlech</div></div>
-    <div><div class="v" data-to="6">0</div><div class="k">Byer på samme kort</div></div>
+    <div><div class="v" data-to="1542" data-sep="1">0<u>m</u></div><div class="k">Fald fra top til bund</div></div>
+    <div><div class="v" data-to="7">0</div><div class="k">Byer på samme kort</div></div>
   </div>
 </section>
 
@@ -1032,6 +1039,7 @@ footer{
         <li>Januar: <b>−1,9 °C</b> / −9,6 °C</li>
         <li>Solopgang 07:55 · solnedgang 16:59</li>
         <li>3-dages liftkort ca. <b>€ 241</b><sup>*</sup></li>
+        <li>Zürich → Lech: 196 km · ca. 2 t</li>
         <li>Skileje i hotellets kælder</li>
         <li><sup>*</sup>2025/26-pris; 2026/27 offentliggøres i efteråret</li>
       </ul>
