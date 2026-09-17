@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     XRT73 SKI · OBERLECH 2027
+     Single-file site til GitHub Pages. Læg filen i repo-roden som index.html
+     REDIGÉR HER:  søg efter  "◆ CONFIG"  (længst nede i <script>)
+     ═══════════════════════════════════════════════════════════════════ -->
+
+<title>XRT73 Ski · Oberlech 2027 — Burg Hotel, Arlberg 17.–20. januar</title>
+<meta name="description" content="Otte mænd, fire dobbeltværelser og 300 km piste. XRT73 på skitur til Burg Hotel i bilfri Oberlech, Lech am Arlberg, 17.–20. januar 2027.">
+<meta name="author" content="XRT73">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#06080B">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://friisnaes.github.io/xrt73-ski/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="da_DK">
+<meta property="og:site_name" content="XRT73 Ski">
+<meta property="og:title" content="XRT73 Ski · Oberlech 2027">
+<meta property="og:description" content="Burg Hotel, 1.650 m. Bilfri Oberlech. Ski-in/ski-out. 17.–20. januar 2027.">
+<meta property="og:url" content="https://friisnaes.github.io/xrt73-ski/">
+<meta property="og:image" content="https://www.burghotel-lech.com/%28cms%29/media/resize/1200x630c%2Cq70i/3351277">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Burg Hotel i Oberlech en vinterdag">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="XRT73 Ski · Oberlech 2027">
+<meta name="twitter:description" content="Burg Hotel, 1.650 m. Bilfri Oberlech. Ski-in/ski-out. 17.–20. januar 2027.">
+<meta name="twitter:image" content="https://www.burghotel-lech.com/%28cms%29/media/resize/1200x630c%2Cq70i/3351277">
+
+<!-- Favicon: XRT-monogram -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2306080B'/%3E%3Cpath d='M8 46 L22 24 L30 34 L42 18 L56 46 Z' fill='%238FC7E8'/%3E%3Cpath d='M42 18 L48 28 L36 28 Z' fill='%23EEF3F8'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2306080B'/%3E%3Cpath d='M8 46 L22 24 L30 34 L42 18 L56 46 Z' fill='%238FC7E8'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.burghotel-lech.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "XRT73 Ski · Oberlech 2027",
+  "startDate": "2027-01-17",
+  "endDate": "2027-01-20",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "description": "XRT73's skitur til Burg Hotel i Oberlech, Lech am Arlberg. Otte deltagere, fire dobbeltværelser, fuld pension.",
+  "maximumAttendeeCapacity": 8,
+  "location": {
+    "@type": "Hotel",
+    "name": "BURG Hotel Oberlech",
+    "starRating": { "@type": "Rating", "ratingValue": "5" },
+    "url": "https://www.burghotel-lech.com/",
+    "telephone": "+43 5583 2291",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Oberlech 266",
+      "postalCode": "6764",
+      "addressLocality": "Lech am Arlberg",
+      "addressCountry": "AT"
+    }
+  },
+  "organizer": { "@type": "Organization", "name": "XRT73" }
+}
+</script>
+
+<style>
+/* ══════════ TOKENS ══════════ */
+:root{
+  --void:#06080B;
+  --night:#0A0E13;
+  --slate:#111922;
+  --slate-2:#16202B;
+  --line:rgba(255,255,255,.085);
+  --line-2:rgba(255,255,255,.16);
+  --snow:#EEF3F8;
+  --mute:#8795A5;
+  --mute-2:#5D6A78;
+  --ice:#8FC7E8;
+  --ice-deep:#2E6B91;
+  --brass:#C9A45C;
+  --display:'Anton',Impact,'Haettenschweiler','Arial Narrow','Liberation Sans Narrow','Arial Black',sans-serif;
+  --sans:'Space Grotesk',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --pad:clamp(18px,5vw,84px);
+  --mtn:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='s' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23122031'/%3E%3Cstop offset='1' stop-color='%23070A0E'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23s)'/%3E%3Cpath d='M0 370 L150 215 L245 292 L380 155 L505 300 L610 240 L800 395 L800 500 L0 500Z' fill='%23162432'/%3E%3Cpath d='M380 155 L420 200 L340 200 Z' fill='%232C4257'/%3E%3Cpath d='M0 430 L180 328 L322 402 L470 296 L642 400 L800 336 L800 500 L0 500Z' fill='%230B131B'/%3E%3C/svg%3E");
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{
+  scroll-behavior:smooth;-webkit-text-size-adjust:100%;
+  overflow-x:hidden;overflow-x:clip;   /* klipper bl.a. ticker-banen, så siden ikke kan skubbes sidelæns */
+}
+body{
+  margin:0;background:var(--void);color:var(--snow);
+  font-family:var(--sans);font-size:16px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--ice);color:#04070A}
+:focus-visible{outline:2px solid var(--ice);outline-offset:3px;border-radius:2px}
+
+/* ══════════ OVERLAYS ══════════ */
+/* Filmkorn. Baggrundspositionen animeres — ikke boksen — så laget aldrig kan
+   skabe overløb eller sidelæns scroll. */
+#grain{
+  position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.055;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat:repeat;
+  animation:grain 6s steps(6) infinite;
+}
+@keyframes grain{
+  0%,100%{background-position:0 0}
+  17%{background-position:-38px -22px}33%{background-position:26px -44px}
+  50%{background-position:-18px 30px}67%{background-position:42px 16px}
+  83%{background-position:-30px -12px}
+}
+#snow{position:fixed;inset:0;z-index:2;pointer-events:none}
+#progress{
+  position:fixed;top:0;left:0;height:2px;width:0;z-index:70;
+  background:linear-gradient(90deg,var(--ice-deep),var(--ice),var(--snow));
+  box-shadow:0 0 12px rgba(143,199,232,.6);
+}
+
+/* ══════════ NAV ══════════ */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:56; /* skal ligge OVER #sheet, ellers kan Luk ikke rammes */
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:16px var(--pad);
+  transition:background .4s ease,border-color .4s ease,padding .4s ease;
+  border-bottom:1px solid transparent;
+}
+header.stuck{
+  background:rgba(6,8,11,.82);backdrop-filter:blur(18px) saturate(140%);
+  -webkit-backdrop-filter:blur(18px) saturate(140%);
+  border-bottom-color:var(--line);padding-top:11px;padding-bottom:11px;
+}
+.brand{display:flex;align-items:center;gap:11px;flex-shrink:0}
+.brand svg{width:26px;height:26px;flex-shrink:0}
+.brand b{font-family:var(--display);font-size:18px;letter-spacing:.11em;line-height:1}
+.brand span{
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.22em;color:var(--mute-2);
+  border-left:1px solid var(--line-2);padding-left:11px;
+}
+nav{display:flex;align-items:center;gap:6px}
+nav a{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.17em;text-transform:uppercase;
+  color:var(--mute);padding:9px 13px;border-radius:999px;transition:.25s;
+}
+nav a:hover,nav a.on{color:var(--snow);background:rgba(255,255,255,.07)}
+nav a.cta{color:#04070A;background:var(--ice);font-weight:700}
+nav a.cta:hover{background:var(--snow)}
+#burger{
+  display:none;background:none;border:1px solid var(--line-2);border-radius:999px;
+  color:var(--snow);padding:9px 15px;font-family:var(--mono);font-size:10.5px;
+  letter-spacing:.17em;cursor:pointer;
+}
+#sheet{
+  position:fixed;inset:0;z-index:55;background:rgba(6,8,11,.97);
+  backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);
+  display:flex;flex-direction:column;justify-content:center;gap:6px;padding:var(--pad);
+  transform:translateY(-100%);transition:transform .5s cubic-bezier(.76,0,.24,1);
+}
+#sheet.open{transform:translateY(0)}
+#sheet a{
+  font-family:var(--display);font-size:clamp(30px,9vw,54px);letter-spacing:.02em;
+  text-transform:uppercase;padding:8px 0;border-bottom:1px solid var(--line);
+  display:flex;align-items:baseline;gap:16px;
+}
+#sheet a i{font-family:var(--mono);font-size:11px;color:var(--ice);font-style:normal}
+
+/* ══════════ HERO ══════════ */
+#hero{
+  position:relative;min-height:100svh;display:flex;flex-direction:column;
+  justify-content:flex-end;overflow:hidden;padding:0 var(--pad) clamp(26px,4vh,52px);
+}
+.bg{position:absolute;inset:0;z-index:0;overflow:hidden;background:var(--mtn) center/cover no-repeat}
+.bg img{
+  width:100%;height:112%;object-fit:cover;position:absolute;top:-6%;left:0;
+  animation:burns 34s ease-in-out infinite alternate;
+}
+@keyframes burns{from{transform:scale(1.04) translate3d(0,0,0)}to{transform:scale(1.15) translate3d(-1.5%,-1.5%,0)}}
+/* Scrims: lyse nok til at billedet lever, mørke nok til at typografien altid kan læses */
+.bg::after{
+  content:'';position:absolute;inset:0;
+  background:
+    linear-gradient(97deg,rgba(6,8,11,.70) 0%,rgba(6,8,11,.30) 38%,rgba(6,8,11,.04) 68%,transparent 100%),
+    linear-gradient(180deg,rgba(6,8,11,.58) 0%,rgba(6,8,11,.10) 15%,rgba(6,8,11,.10) 30%,rgba(6,8,11,.52) 58%,rgba(6,8,11,.88) 85%,var(--void) 100%),
+    radial-gradient(150% 100% at 60% 6%,transparent 42%,rgba(6,8,11,.34) 100%);
+}
+/* .bg skal IKKE rammes her — den er absolut placeret baggrund */
+#hero>*:not(.bg){position:relative;z-index:3;text-shadow:0 1px 28px rgba(4,6,9,.6),0 1px 3px rgba(4,6,9,.4)}
+#hero .herostats{text-shadow:none}
+#hero .subline{color:#B3BEC9}
+
+.eyebrow{
+  display:flex;align-items:center;gap:13px;font-family:var(--mono);
+  font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ice);
+  margin-bottom:clamp(10px,2vh,20px);
+}
+.eyebrow::before{content:'';width:clamp(26px,6vw,64px);height:1px;background:var(--ice);flex-shrink:0}
+
+h1{
+  font-family:var(--display);font-weight:400;margin:0;
+  font-size:clamp(58px,17vw,215px);line-height:.82;letter-spacing:-.012em;
+  text-transform:uppercase;
+}
+h1 .l{display:block;overflow:hidden}
+h1 .l>span{display:block;transform:translateY(105%);animation:rise 1.15s cubic-bezier(.16,1,.3,1) forwards}
+h1 .l:nth-child(2)>span{animation-delay:.11s}
+@keyframes rise{to{transform:translateY(0)}}
+h1 em{
+  font-style:normal;
+  background:linear-gradient(100deg,var(--snow) 6%,#C4E0F4 34%,var(--ice) 68%,#63A0C7 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.subline{
+  display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;
+  margin:clamp(14px,2.6vh,26px) 0 0;
+  font-family:var(--mono);font-size:clamp(10.5px,1.5vw,13px);
+  letter-spacing:.14em;text-transform:uppercase;color:var(--mute);
+}
+.subline b{color:var(--snow);font-weight:400}
+.subline i{color:var(--line-2);font-style:normal}
+
+/* countdown */
+.clock{
+  display:flex;flex-wrap:wrap;gap:clamp(8px,2.4vw,26px);
+  margin-top:clamp(20px,3.4vh,40px);padding-top:clamp(18px,3vh,30px);
+  border-top:1px solid var(--line);
+}
+.unit{min-width:62px}
+.unit .n{
+  font-family:var(--display);font-size:clamp(30px,6.4vw,62px);line-height:.9;
+  font-variant-numeric:tabular-nums;letter-spacing:.01em;
+}
+.unit .n.tick{animation:tick .5s ease}
+@keyframes tick{0%{opacity:.35;transform:translateY(-4px)}100%{opacity:1;transform:none}}
+.unit .t{
+  font-family:var(--mono);font-size:9px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--mute-2);margin-top:6px;
+}
+.unit:first-child .n{color:var(--ice)}
+.clock .sep{
+  align-self:stretch;width:1px;background:var(--line);margin:0 clamp(0px,1vw,10px);
+}
+.clock .goal{
+  margin-left:auto;align-self:flex-end;max-width:210px;
+  font-family:var(--mono);font-size:10px;letter-spacing:.13em;line-height:1.75;
+  color:var(--mute-2);text-transform:uppercase;text-align:right;
+}
+.clock .goal b{color:var(--brass);font-weight:400}
+
+.herostats{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:clamp(22px,3.6vh,42px);
+  background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden;
+}
+.herostats>div{
+  background:rgba(8,11,15,.6);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  padding:clamp(11px,1.8vw,17px) clamp(10px,1.6vw,19px);
+}
+.herostats .v{font-family:var(--display);font-size:clamp(17px,2.9vw,31px);line-height:1;letter-spacing:.01em}
+.herostats .k{
+  font-family:var(--mono);font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--mute-2);margin-top:7px;
+}
+
+/* ══════════ TICKER ══════════ */
+.ticker{
+  border-block:1px solid var(--line);background:var(--night);
+  overflow:hidden;padding:15px 0;position:relative;z-index:4;
+}
+.ticker .rail{display:flex;width:max-content;animation:slide 52s linear infinite}
+.ticker:hover .rail{animation-play-state:paused}
+@keyframes slide{to{transform:translateX(-50%)}}
+.ticker span{
+  font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--mute);padding:0 24px;white-space:nowrap;display:flex;align-items:center;gap:24px;
+}
+.ticker span::after{content:'';width:4px;height:4px;border-radius:50%;background:var(--ice);opacity:.55}
+
+/* ══════════ SECTIONS ══════════ */
+section{padding:clamp(70px,12vh,150px) var(--pad);position:relative;z-index:4}
+#crew,#burg,#tal{scroll-margin-top:72px}
+.head{
+  display:grid;grid-template-columns:auto 1fr;gap:clamp(18px,4vw,54px);
+  align-items:start;margin-bottom:clamp(38px,6vh,74px);
+}
+.num{
+  font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--ice);
+  padding-top:10px;white-space:nowrap;
+}
+.head h2{
+  font-family:var(--display);font-weight:400;margin:0;text-transform:uppercase;
+  font-size:clamp(31px,6.6vw,86px);line-height:.94;letter-spacing:-.008em;
+}
+.head h2 em{font-style:normal;color:#6F7E8E}
+.head p{
+  margin:18px 0 0;max-width:58ch;color:var(--mute);
+  font-size:clamp(14.5px,1.5vw,17.5px);line-height:1.72;
+}
+.head p b{color:var(--snow);font-weight:500}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+
+/* ══════════ CREW ══════════ */
+/* 8 mand → altid et rent gitter: 4×2, 2×4 eller 1×8 */
+.crew{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line)}
+@media (max-width:1040px){.crew{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:359px){.crew{grid-template-columns:1fr}}
+.man{
+  background:var(--night);padding:clamp(20px,2.4vw,28px);position:relative;overflow:hidden;
+  transition:background .45s ease;min-height:214px;display:flex;flex-direction:column;
+}
+.man::before{
+  content:'';position:absolute;inset:0;opacity:0;transition:opacity .45s ease;
+  background:radial-gradient(120% 90% at 100% 0%,rgba(143,199,232,.15),transparent 62%);
+}
+.man:hover{background:var(--slate)}
+.man:hover::before{opacity:1}
+.man .mono{
+  font-family:var(--display);font-size:clamp(38px,4.6vw,56px);line-height:.82;
+  letter-spacing:.01em;
+  background:linear-gradient(140deg,var(--snow),var(--ice) 55%,var(--ice-deep));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.man h3{
+  font-family:var(--sans);font-weight:700;font-size:clamp(17px,1.9vw,21px);
+  margin:auto 0 0;letter-spacing:-.01em;line-height:1.25;
+}
+.man h3 small{display:block;font-weight:400;font-size:13px;color:var(--mute-2);margin-top:3px}
+.man .role{
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.17em;text-transform:uppercase;
+  color:var(--ice);margin-top:13px;padding-top:13px;border-top:1px solid var(--line);
+}
+.man .rm{
+  position:absolute;top:clamp(20px,2.4vw,28px);right:clamp(20px,2.4vw,28px);
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;color:var(--mute-2);
+  border:1px solid var(--line-2);border-radius:999px;padding:4px 10px;
+  transition:.35s;white-space:nowrap;
+}
+.man .rm.set{color:#04070A;background:var(--brass);border-color:var(--brass)}
+
+/* rooms */
+.rooms{margin-top:clamp(30px,5vh,58px);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.rooms .bar{
+  display:flex;flex-wrap:wrap;align-items:center;gap:14px;
+  padding:16px clamp(16px,2.4vw,26px);background:var(--night);border-bottom:1px solid var(--line);
+}
+.rooms .bar h4{
+  margin:0;font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--mute);font-weight:400;
+}
+.rooms .bar h4 b{color:var(--snow);font-weight:400}
+.btn{
+  margin-left:auto;font-family:var(--mono);font-size:10px;letter-spacing:.18em;
+  text-transform:uppercase;cursor:pointer;border:1px solid var(--line-2);
+  background:transparent;color:var(--snow);padding:10px 17px;border-radius:999px;transition:.28s;
+}
+.btn:hover{background:var(--snow);color:#04070A;border-color:var(--snow)}
+.btn.ghost{margin-left:0;color:var(--mute-2)}
+.btn.ghost:hover{background:transparent;color:var(--snow);border-color:var(--line-2)}
+.beds{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:1px;background:var(--line)}
+.bed{background:var(--slate);padding:clamp(15px,2vw,22px);min-height:118px}
+.bed .no{
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;color:var(--brass);
+  text-transform:uppercase;margin-bottom:11px;
+}
+.bed .who{font-size:15px;line-height:1.85;color:var(--snow)}
+.bed .who span{display:block;transition:opacity .3s}
+.bed .who .q{color:var(--mute-2)}
+.bed.roll .who span{opacity:.22}
+
+/* ══════════ BURG ══════════ */
+.facts{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(152px,1fr));gap:1px;
+  background:var(--line);border-block:1px solid var(--line);margin-bottom:clamp(34px,5vh,60px);
+}
+.facts>div{background:var(--void);padding:clamp(17px,2.2vw,25px)}
+.facts .v{font-family:var(--display);font-size:clamp(23px,3.4vw,40px);line-height:1;color:var(--snow)}
+.facts .v small{font-family:var(--sans);font-size:12px;font-weight:400;color:var(--mute-2);letter-spacing:0}
+.facts .k{
+  font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--mute-2);margin-top:9px;line-height:1.6;
+}
+
+/* gallery mosaic */
+.gal{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(5px,.8vw,11px)}
+.cell{
+  position:relative;overflow:hidden;background:var(--mtn) center/cover;border-radius:3px;
+  grid-column:span 4;aspect-ratio:4/3;cursor:zoom-in;
+}
+.cell.fill{aspect-ratio:auto}   /* fylder rækkens højde ud ved siden af et bredt felt */
+.cell.w6{grid-column:span 6;aspect-ratio:3/2}
+.cell.w8{grid-column:span 8;aspect-ratio:16/9}
+.cell.w12{grid-column:span 12;aspect-ratio:21/9}
+.cell img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform 1.1s cubic-bezier(.16,1,.3,1),opacity .6s ease,filter .6s ease;
+  filter:saturate(.92) contrast(1.04);
+}
+.cell:hover img{transform:scale(1.055);filter:saturate(1.04) contrast(1.02)}
+.cell img.dead{opacity:0}
+.cell figcaption{
+  position:absolute;inset:auto 0 0 0;padding:clamp(13px,1.8vw,22px);
+  background:linear-gradient(to top,rgba(4,6,9,.93),rgba(4,6,9,.55) 46%,transparent);
+  pointer-events:none;
+}
+.cell figcaption b{
+  display:block;font-family:var(--display);font-size:clamp(14px,1.7vw,22px);
+  text-transform:uppercase;letter-spacing:.02em;line-height:1.05;
+}
+.cell figcaption span{
+  display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.11em;
+  color:var(--mute);margin-top:6px;line-height:1.65;
+}
+.cell .tag{
+  position:absolute;top:11px;left:11px;z-index:2;font-family:var(--mono);font-size:8.5px;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--snow);
+  background:rgba(6,8,11,.62);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border:1px solid var(--line-2);border-radius:999px;padding:4px 10px;
+}
+
+/* lightbox */
+#lb{
+  position:fixed;inset:0;z-index:80;background:rgba(4,6,9,.96);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  display:none;place-items:center;padding:clamp(14px,4vw,58px);
+}
+#lb.open{display:grid}
+#lb figure{margin:0;max-width:min(1240px,100%);max-height:100%;display:flex;flex-direction:column;gap:15px}
+#lb img{max-width:100%;max-height:78svh;object-fit:contain;border-radius:3px;background:var(--mtn) center/cover}
+#lb figcaption{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline}
+#lb figcaption b{font-family:var(--display);font-size:clamp(17px,2.4vw,27px);text-transform:uppercase;letter-spacing:.02em}
+#lb figcaption span{font-family:var(--mono);font-size:10.5px;letter-spacing:.11em;color:var(--mute)}
+#lb .x,#lb .pv,#lb .nx{
+  position:absolute;border:1px solid var(--line-2);background:rgba(10,14,19,.72);
+  color:var(--snow);width:46px;height:46px;border-radius:50%;cursor:pointer;
+  font-family:var(--mono);font-size:15px;display:grid;place-items:center;transition:.25s;
+}
+#lb .x:hover,#lb .pv:hover,#lb .nx:hover{background:var(--snow);color:#04070A;border-color:var(--snow)}
+#lb .x{top:clamp(14px,3vw,30px);right:clamp(14px,3vw,30px)}
+#lb .pv{left:clamp(10px,2vw,26px);top:50%;margin-top:-23px}
+#lb .nx{right:clamp(10px,2vw,26px);top:50%;margin-top:-23px}
+#lb .ct{
+  position:absolute;bottom:clamp(14px,3vw,30px);left:50%;transform:translateX(-50%);
+  font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--mute-2);
+}
+
+/* arrival */
+.arrive{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(196px,1fr));gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden;
+  margin-top:clamp(34px,5vh,62px);
+}
+.step{background:var(--night);padding:clamp(19px,2.4vw,27px);position:relative}
+.step .i{
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;color:var(--ice);margin-bottom:13px;
+}
+.step h5{
+  margin:0 0 9px;font-family:var(--sans);font-weight:700;font-size:16px;letter-spacing:-.01em;
+}
+.step p{margin:0;font-size:13.5px;line-height:1.68;color:var(--mute)}
+.step p b{color:var(--snow);font-weight:500}
+
+/* numbers */
+.tal{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:1px;background:var(--line)}
+.tal>div{background:var(--void);padding:clamp(20px,2.6vw,30px) clamp(14px,2vw,22px);text-align:left}
+.tal .v{
+  font-family:var(--display);font-size:clamp(26px,3.7vw,50px);line-height:1;white-space:nowrap;
+  font-variant-numeric:tabular-nums;
+  background:linear-gradient(160deg,var(--snow),var(--ice) 78%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.tal .v u{text-decoration:none;font-size:.44em;color:var(--mute-2);-webkit-text-fill-color:var(--mute-2);margin-left:3px}
+.tal .k{
+  font-family:var(--mono);font-size:9px;letter-spacing:.19em;text-transform:uppercase;
+  color:var(--mute-2);margin-top:11px;line-height:1.6;
+}
+
+/* quote */
+.quote{
+  margin:clamp(52px,9vh,110px) 0 0;padding:clamp(30px,5vw,64px) 0 0;
+  border-top:1px solid var(--line);
+}
+.quote blockquote{
+  margin:0;max-width:24ch;font-family:var(--display);text-transform:uppercase;
+  font-size:clamp(27px,5.4vw,66px);line-height:1.02;letter-spacing:-.01em;
+}
+.quote blockquote em{font-style:normal;color:var(--ice)}
+.quote cite{
+  display:block;margin-top:22px;font-family:var(--mono);font-style:normal;
+  font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute-2);
+}
+
+/* ══════════ FOOTER ══════════ */
+footer{
+  border-top:1px solid var(--line);padding:clamp(52px,8vh,92px) var(--pad) 34px;
+  background:var(--night);position:relative;z-index:4;
+}
+.fgrid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(196px,1fr));
+  gap:clamp(26px,4vw,54px);margin-bottom:clamp(38px,6vh,66px);
+}
+.fgrid h6{
+  margin:0 0 15px;font-family:var(--mono);font-size:9.5px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--mute-2);font-weight:400;
+}
+.fgrid ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+.fgrid li{font-size:14px;color:var(--mute);line-height:1.55}
+.fgrid li b{color:var(--snow);font-weight:500}
+.fgrid a{border-bottom:1px solid var(--line-2);padding-bottom:1px;transition:.25s}
+.fgrid a:hover{color:var(--ice);border-color:var(--ice)}
+.wordmark{
+  font-family:var(--display);font-size:clamp(46px,15vw,190px);line-height:.8;
+  text-transform:uppercase;letter-spacing:-.015em;color:transparent;
+  -webkit-text-stroke:1px var(--line-2);margin-bottom:26px;
+}
+.fbase{
+  display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:space-between;
+  padding-top:24px;border-top:1px solid var(--line);
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--mute-2);
+}
+
+/* ══════════ RESPONSIVE ══════════ */
+@media (max-width:900px){
+  nav{display:none}
+  #burger{display:block}
+  .herostats{grid-template-columns:repeat(2,1fr)}
+  .head{grid-template-columns:1fr;gap:14px}
+  .num{padding-top:0}
+  .clock .goal{margin-left:0;text-align:left;width:100%;max-width:none;padding-top:14px}
+  .cell,.cell.fill,.cell.w6,.cell.w8,.cell.w12{grid-column:span 12;aspect-ratio:4/3}
+  #lb .pv,#lb .nx{top:auto;bottom:clamp(14px,3vw,30px);margin-top:0}
+  #lb .pv{left:calc(50% - 58px)}
+  #lb .nx{right:calc(50% - 58px)}
+  #lb .ct{bottom:78px}
+}
+@media (max-width:560px){
+  .unit{min-width:0;flex:1 1 0}
+  .clock .sep{display:none}
+  .brand span{display:none}
+  .eyebrow{letter-spacing:.2em}
+  .eyebrow::before{display:none}
+  /* Kompakte mandekort: badge ud af hjørnet og ned i flowet */
+  .man{min-height:0;padding:17px 16px}
+  .man .mono{font-size:36px}
+  .man h3{margin-top:13px;font-size:17px}
+  .man h3 small{font-size:12.5px}
+  .man .role{margin-top:11px;padding-top:11px;font-size:9px;letter-spacing:.13em}
+  .man .rm{position:static;display:inline-block;margin-top:12px;font-size:9px}
+  .bed{min-height:0}
+  .btn{flex:1 1 auto;margin-left:0}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none}
+  #snow{display:none}
+}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+<div id="grain" aria-hidden="true"></div>
+<canvas id="snow" aria-hidden="true"></canvas>
+
+<!-- ══════════ NAV ══════════ -->
+<header id="top">
+  <a class="brand" href="#hero" aria-label="XRT73 Ski, til toppen">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="13" fill="#0D141C" stroke="rgba(255,255,255,.14)"/><path d="M8 46 L22 24 L30 34 L42 18 L56 46 Z" fill="#8FC7E8"/><path d="M42 18 L48 28 L36 28 Z" fill="#EEF3F8"/></svg>
+    <b>XRT73&nbsp;SKI</b>
+    <span>OBERLECH&nbsp;·&nbsp;2027</span>
+  </a>
+  <nav aria-label="Sektioner">
+    <a href="#crew">Besætningen</a>
+    <a href="#burg">Burg Hotel</a>
+    <a href="#tal">Arlberg i tal</a>
+    <a class="cta" href="https://www.burghotel-lech.com/" target="_blank" rel="noopener">Hotellet ↗</a>
+  </nav>
+  <button id="burger" aria-expanded="false" aria-controls="sheet">Menu</button>
+</header>
+
+<div id="sheet" role="dialog" aria-modal="true" aria-label="Menu">
+  <a href="#crew"><i>01</i> Besætningen</a>
+  <a href="#burg"><i>02</i> Burg Hotel</a>
+  <a href="#tal"><i>03</i> Arlberg i tal</a>
+  <a href="https://www.burghotel-lech.com/" target="_blank" rel="noopener"><i>↗</i> Hotellet</a>
+</div>
+
+<!-- ══════════ HERO ══════════ -->
+<main>
+<section id="hero">
+  <div class="bg" aria-hidden="true">
+    <img id="heroimg" src="https://www.burghotel-lech.com/%28cms%29/media/resize/2000x1200c%2Cq70i/3351277"
+         alt="" referrerpolicy="no-referrer" fetchpriority="high" decoding="async">
+  </div>
+
+  <p class="eyebrow">XRT73 · Skitur · Lech am Arlberg, Østrig</p>
+
+  <h1>
+    <span class="l"><span>Ober</span></span>
+    <span class="l"><span><em>lech</em></span></span>
+  </h1>
+
+  <p class="subline">
+    <b>17.–20. januar 2027</b> <i>/</i>
+    <b>Burg Hotel</b> <i>/</i>
+    1.650&nbsp;m <i>/</i>
+    Bilfri <i>/</i>
+    Ski-in&nbsp;·&nbsp;Ski-out
+  </p>
+
+  <div class="clock" id="clock" aria-live="polite" aria-label="Nedtælling til afgang">
+    <div class="unit"><div class="n" id="cd-d">—</div><div class="t">Dage</div></div>
+    <div class="sep"></div>
+    <div class="unit"><div class="n" id="cd-h">—</div><div class="t">Timer</div></div>
+    <div class="sep"></div>
+    <div class="unit"><div class="n" id="cd-m">—</div><div class="t">Minutter</div></div>
+    <div class="sep"></div>
+    <div class="unit"><div class="n" id="cd-s">—</div><div class="t">Sekunder</div></div>
+    <div class="goal">Afgang<br><b id="cd-goal">søn. 17. jan. 2027</b><br>Hjemkomst 20. januar</div>
+  </div>
+
+  <div class="herostats">
+    <div><div class="v">8</div><div class="k">Herrer</div></div>
+    <div><div class="v">57–67</div><div class="k">År</div></div>
+    <div><div class="v">4</div><div class="k">Dobbeltværelser</div></div>
+    <div><div class="v">100&nbsp;%</div><div class="k">Luksus</div></div>
+  </div>
+</section>
+
+<!-- ══════════ TICKER ══════════ -->
+<div class="ticker" aria-hidden="true">
+  <div class="rail" id="rail">
+    <span>Bilfri ankomst</span><span>Ski-in / ski-out</span><span>1.550 m² spa</span>
+    <span>300 km piste</span><span>5-retters gourmet</span><span>Der Weiße Ring</span>
+    <span>Kriegeralpe · 2.000 m</span><span>Eisbar No.1</span><span>Fuld pension</span>
+    <span>85 lifte</span><span>Valluga 2.811 m</span><span>Tredje generation Lucian</span>
+  </div>
+</div>
+
+<!-- ══════════ 01 · CREW ══════════ -->
+<section id="crew">
+  <div class="head rv">
+    <div class="num">01 — Besætningen</div>
+    <div>
+      <h2>Otte mænd.<br>Fire værelser.<br><em>Ét bjerg.</em></h2>
+      <p>Samlet står der over 500 år på bagen af den her gruppe — og ikke én af dem har planer om at tage den med ro. <b>Fire dobbeltværelser</b> er reserveret på Burg. Fordelingen er til forhandling. Eller til lodtrækning.</p>
+    </div>
+  </div>
+
+  <div class="crew rv" id="crewgrid">
+    <article class="man"><div class="mono">MA</div><h3>Morten<small>Axel</small></h3><div class="role">Chef de Piste</div><div class="rm" data-rm>Værelse —</div></article>
+    <article class="man"><div class="mono">JF</div><h3>Jes<small>Frydendall</small></h3><div class="role">Vinansvarlig</div><div class="rm" data-rm>Værelse —</div></article>
+    <article class="man"><div class="mono">TF</div><h3>Thomas<small>Friisnæs</small></h3><div class="role">Rejseleder &amp; bødemester</div><div class="rm" data-rm>Værelse —</div></article>
+    <article class="man"><div class="mono">HH</div><h3>Henrik<small>Holtegaard</small></h3><div class="role">Transfer &amp; logistik</div><div class="rm" data-rm>Værelse —</div></article>
+    <article class="man"><div class="mono">KK</div><h3>Kim<small>Kehlet Johansen</small></h3><div class="role">Après-ski-general</div><div class="rm" data-rm>Værelse —</div></article>
+    <article class="man"><div class="mono">TS</div><h3>Torben<small>Spuur Jensen</small></h3><div class="role">Vejrmelder</div><div class="rm" data-rm>Værelse —</div></article>
+    <article class="man"><div class="mono">NL</div><h3>Nis<small>Juhl Lorenzen</small></h3><div class="role">Fotograf</div><div class="rm" data-rm>Værelse —</div></article>
+    <article class="man"><div class="mono">MS</div><h3>Michael<small>Steffens</small></h3><div class="role">Musik &amp; stemning</div><div class="rm" data-rm>Værelse —</div></article>
+  </div>
+
+  <div class="rooms rv">
+    <div class="bar">
+      <h4>Værelsesfordeling · <b>4 × dobbeltværelse</b> · Burg Hotel</h4>
+      <button class="btn" id="draw">Træk lod</button>
+      <button class="btn ghost" id="reset">Nulstil</button>
+    </div>
+    <div class="beds" id="beds">
+      <div class="bed"><div class="no">Værelse 01</div><div class="who"><span class="q">—</span><span class="q">—</span></div></div>
+      <div class="bed"><div class="no">Værelse 02</div><div class="who"><span class="q">—</span><span class="q">—</span></div></div>
+      <div class="bed"><div class="no">Værelse 03</div><div class="who"><span class="q">—</span><span class="q">—</span></div></div>
+      <div class="bed"><div class="no">Værelse 04</div><div class="who"><span class="q">—</span><span class="q">—</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 02 · BURG ══════════ -->
+<section id="burg">
+  <div class="head rv">
+    <div class="num">02 — Kvarteret</div>
+    <div>
+      <h2>Burg Hotel.<br>Fem stjerner,<br><em>1.650 m oppe.</em></h2>
+      <p>Tredje generation af familien <b>Lucian</b> driver Burg Hotel på solsiden af Oberlech — direkte på pisten, med liften som nærmeste nabo. Fra december til april er Oberlech <b>helt bilfrit</b>: man parkerer nede i Lech, tager svævebanen op, og bagagen bliver hentet i ankomsthallen. Hotellerne deroppe er forbundet af et tunnelsystem, så man aldrig behøver ud i kulden for at komme rundt.</p>
+      <p>Indenfor venter <b>1.550 m² spa</b> med saunaer, dampbad, infrarød og snekabine, en udendørs pool med udsigt over Lech-dalen, eget bageri — og en håndfuld restauranter: Burg Restaurant til gourmet, den hauben-belønnede Lechtaler Stube, Burg Schenke, Eisbar No.1 og hotellets egen <b>Kriegeralpe i 2.000 meters højde</b>.</p>
+    </div>
+  </div>
+
+  <div class="facts rv">
+    <div><div class="v">★★★★★</div><div class="k">Fem stjerner</div></div>
+    <div><div class="v">1.650<small> m</small></div><div class="k">Over havet</div></div>
+    <div><div class="v">1.550<small> m²</small></div><div class="k">Spa &amp; wellness</div></div>
+    <div><div class="v">3.</div><div class="k">Generation Lucian</div></div>
+    <div><div class="v">0</div><div class="k">Biler i Oberlech<br>dec – apr</div></div>
+    <div><div class="v">5</div><div class="k">Retter til aften</div></div>
+  </div>
+
+  <div class="gal rv" id="gal">
+    <figure class="cell w8" data-i="0">
+      <span class="tag">Spa</span>
+      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/1400x790c%2Cq70i/3351281" alt="Udendørs pool på Burg Hotel med udsigt over bjergene" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <figcaption><b>Udendørs pool</b><span>Opvarmet, i det fri, 1.650 m over havet</span></figcaption>
+    </figure>
+    <figure class="cell fill" data-i="1">
+      <span class="tag">Terrassen</span>
+      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/900x680c%2Cq70i/3151041" alt="Gæster på solterrassen med panoramaudsigt" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <figcaption><b>Solterrassen</b><span>Panorama over Lech-dalen</span></figcaption>
+    </figure>
+    <figure class="cell" data-i="2">
+      <span class="tag">Værelser</span>
+      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/900x680c%2Cq70i/2462581" alt="Værelse på Burg Hotel Oberlech" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <figcaption><b>Værelserne</b><span>Fire dobbeltværelser er vores</span></figcaption>
+    </figure>
+    <figure class="cell" data-i="3">
+      <span class="tag">Wellness</span>
+      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/900x680c%2Cq70i/3362009" alt="Wellnessområdet på Burg Hotel" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <figcaption><b>Wellness-oasen</b><span>Sauna · dampbad · infrarød · snekabine</span></figcaption>
+    </figure>
+    <figure class="cell" data-i="4">
+      <span class="tag">Spa</span>
+      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/900x680c%2Cq70i/2557529" alt="Afslapning i spaen" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <figcaption><b>1.550 m²</b><span>Efter sidste nedkørsel</span></figcaption>
+    </figure>
+    <figure class="cell w6" data-i="5">
+      <span class="tag">Middag</span>
+      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/1100x740c%2Cq70i/2874761" alt="Middag med venner på Burg Hotel" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <figcaption><b>Middag med vennerne</b><span>Fem retter. Hver aften. Fuld pension</span></figcaption>
+    </figure>
+    <figure class="cell w6" data-i="6">
+      <span class="tag">Vin</span>
+      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/1100x740c%2Cq70i/2881427" alt="Vin og fine dining" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <figcaption><b>Vinkælderen</b><span>Lechtaler Stube · haube-belønnet</span></figcaption>
+    </figure>
+    <figure class="cell" data-i="7">
+      <span class="tag">Gourmet</span>
+      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/900x680c%2Cq70i/3151051" alt="Gourmetret på Burg Restaurant" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <figcaption><b>Burg Restaurant</b><span>Regionalt · mediterrant · fransk</span></figcaption>
+    </figure>
+    <figure class="cell" data-i="8">
+      <span class="tag">Après</span>
+      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/900x680c%2Cq70i/2881423" alt="Après-ski på Burg Hotel" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <figcaption><b>Après-ski</b><span>Fra pisten direkte ind i Burg Schenke</span></figcaption>
+    </figure>
+    <figure class="cell" data-i="9">
+      <span class="tag">Sent</span>
+      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/900x680c%2Cq70i/2764451" alt="Aften på Burg Hotel" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <figcaption><b>Eisbar No.1</b><span>Lukker ikke af sig selv</span></figcaption>
+    </figure>
+    <figure class="cell w12" data-i="10">
+      <span class="tag">Arlberg</span>
+      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/1800x780c%2Cq70i/3150957" alt="Vinterlandskab omkring Oberlech" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <figcaption><b>Arlberg, januar</b><span>17 snedage i måneden · −1,9 °C om dagen · −9,6 °C om natten</span></figcaption>
+    </figure>
+  </div>
+
+  <div class="arrive rv">
+    <div class="step">
+      <div class="i">01 — Fly</div>
+      <h5>København → München</h5>
+      <p>Ca. <b>1 t 40 min</b> i luften. München er nærmeste store lufthavn med gode danske afgange.</p>
+    </div>
+    <div class="step">
+      <div class="i">02 — Transfer</div>
+      <h5>München → Lech</h5>
+      <p><b>243 km, ca. 3 timer</b>. Kør via Kufstein/Inndalen eller Memmingen–Lindau — Warth-passet er lukket om vinteren.</p>
+    </div>
+    <div class="step">
+      <div class="i">03 — Parkering</div>
+      <h5>Anger P-hus, Lech</h5>
+      <p>Opvarmet P-hus med <b>600+ pladser</b>, åbent 24/7, lige over for Lechwelten. Her stopper bilen.</p>
+    </div>
+    <div class="step">
+      <div class="i">04 — Op</div>
+      <h5>Bergbahn Oberlech</h5>
+      <p>Svævebanen op på <b>få minutter</b>. Bagagen hentes i ankomstniveauet, og en tunnel fører tørskoet til Burg.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 03 · TAL ══════════ -->
+<section id="tal">
+  <div class="head rv">
+    <div class="num">03 — Arlberg i tal</div>
+    <div>
+      <h2>Ski Arlberg.<br><em>Det største i Østrig.</em></h2>
+      <p>Lech, Oberlech, Zürs, Zug, St. Anton, St. Christoph, Stuben, Warth og Schröcken hænger sammen i ét liftsystem — siden Flexenbahn åbnede i 2016 kan man køre hele vejen rundt uden at sætte støvlerne i en bus.</p>
+    </div>
+  </div>
+
+  <div class="tal rv" id="tal-grid">
+    <div><div class="v" data-to="300" data-suf=" km">0</div><div class="k">Præparerede pister</div></div>
+    <div><div class="v" data-to="200" data-suf=" km">0</div><div class="k">Off-piste &amp; ruter</div></div>
+    <div><div class="v" data-to="85">0</div><div class="k">Lifte &amp; svævebaner</div></div>
+    <div><div class="v" data-to="2811" data-sep="1">0<u>m</u></div><div class="k">Valluga · højeste punkt</div></div>
+    <div><div class="v" data-to="1542" data-sep="1">0<u>m</u></div><div class="k">Fald fra top til bund</div></div>
+    <div><div class="v" data-to="22" data-suf=" km">0</div><div class="k">Der Weiße Ring<br>· 5.500 hm · 5 lifte</div></div>
+  </div>
+
+  <div class="quote rv">
+    <blockquote>Der er <em>300 kilometer</em> piste. Vi har tre dage. Regn selv.</blockquote>
+    <cite>XRT73 · Oberlech · januar 2027</cite>
+  </div>
+</section>
+</main>
+
+<!-- ══════════ LIGHTBOX ══════════ -->
+<div id="lb" role="dialog" aria-modal="true" aria-label="Billede">
+  <button class="x" id="lb-x" aria-label="Luk">✕</button>
+  <button class="pv" id="lb-pv" aria-label="Forrige">‹</button>
+  <button class="nx" id="lb-nx" aria-label="Næste">›</button>
+  <figure>
+    <img id="lb-img" src="" alt="">
+    <figcaption><b id="lb-t"></b><span id="lb-s"></span></figcaption>
+  </figure>
+  <div class="ct" id="lb-c"></div>
+</div>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="fgrid">
+    <div>
+      <h6>Turen</h6>
+      <ul>
+        <li><b>17.–20. januar 2027</b></li>
+        <li>3 nætter · fuld pension</li>
+        <li>4 × dobbeltværelse</li>
+        <li>8 deltagere</li>
+      </ul>
+    </div>
+    <div>
+      <h6>Hotellet</h6>
+      <ul>
+        <li><b>BURG Hotel Oberlech</b></li>
+        <li>Oberlech 266, 6764 Lech</li>
+        <li>Vorarlberg, Østrig</li>
+        <li><a href="tel:+4355832291">+43 5583 2291</a></li>
+        <li><a href="https://www.burghotel-lech.com/" target="_blank" rel="noopener">burghotel-lech.com ↗</a></li>
+      </ul>
+    </div>
+    <div>
+      <h6>Inden afgang</h6>
+      <ul>
+        <li><a href="https://www.lechzuers.com/en/webcams" target="_blank" rel="noopener">Webcams i Lech ↗</a></li>
+        <li><a href="https://www.skiarlberg.at/en/lech-zuers/tickets-season-times/prices-tickets-winter" target="_blank" rel="noopener">Liftkort &amp; priser ↗</a></li>
+        <li><a href="https://www.skiarlberg.at/en/lech-zuers/getting-here-parking/oberlech" target="_blank" rel="noopener">Ankomst til Oberlech ↗</a></li>
+        <li><a href="https://www.derweissering.ski/en" target="_blank" rel="noopener">Der Weiße Ring ↗</a></li>
+        <li><a href="https://www.snow-forecast.com/resorts/Lech/6day/mid" target="_blank" rel="noopener">Snevarsel ↗</a></li>
+      </ul>
+    </div>
+    <div>
+      <h6>Godt at vide</h6>
+      <ul>
+        <li>Januar: <b>−1,9 °C</b> / −9,6 °C</li>
+        <li>Solopgang 07:55 · solnedgang 16:59</li>
+        <li>3-dages liftkort ca. <b>€ 241</b><sup>*</sup></li>
+        <li>Oberlech er bilfrit dec–apr</li>
+        <li><sup>*</sup>2025/26-pris, 2026/27 offentliggøres i efteråret</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wordmark" aria-hidden="true">Oberlech&nbsp;27</div>
+
+  <div class="fbase">
+    <span>XRT73 · Skitur 2027</span>
+    <span>Billeder © Burg Hotel Oberlech</span>
+    <span><a href="#top">Til toppen ↑</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+
+/* ═══════════════════════════════════════════════════════════
+   ◆ CONFIG — ret kun her
+   ═══════════════════════════════════════════════════════════ */
+var CONFIG = {
+  // Afgangstidspunkt (ISO med tidszone). Nedtællingen kører mod dette.
+  departure: '2027-01-17T08:00:00+01:00',
+
+  // Værelsesfordeling. Sæt navne ind når den er aftalt, fx:
+  //   rooms: [['Thomas','Morten'],['Jes','Henrik'],['Kim','Torben'],['Nis','Michael']]
+  // Lad den stå som null, så bliver "Træk lod"-knappen aktiv i stedet.
+  rooms: null,
+
+  snow: true          // sæt til false for at slukke snefaldet
+};
+/* ═══════════════════════════════════════════════════════════ */
+
+var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var $  = function(s,r){ return (r||document).querySelector(s); };
+var $$ = function(s,r){ return Array.prototype.slice.call((r||document).querySelectorAll(s)); };
+
+/* ── 1. Nedtælling ───────────────────────────────────────── */
+(function(){
+  var target = new Date(CONFIG.departure).getTime();
+  var el = { d:$('#cd-d'), h:$('#cd-h'), m:$('#cd-m'), s:$('#cd-s') };
+  var last = {};
+  var goal = $('#cd-goal');
+  if(goal && !isNaN(target)){
+    try{
+      goal.textContent = new Date(target).toLocaleDateString('da-DK',
+        {weekday:'short', day:'numeric', month:'short', year:'numeric'});
+    }catch(e){}
+  }
+  function pad(n){ return n<10 ? '0'+n : ''+n; }
+  function tick(){
+    var gap = target - Date.now();
+    if(gap <= 0){
+      el.d.textContent='0'; el.h.textContent='00'; el.m.textContent='00'; el.s.textContent='00';
+      var g=$('#cd-goal'); if(g) g.innerHTML='<b>Vi er der.</b>';
+      return;
+    }
+    var v = {
+      d: Math.floor(gap/864e5),
+      h: pad(Math.floor(gap/36e5)%24),
+      m: pad(Math.floor(gap/6e4)%60),
+      s: pad(Math.floor(gap/1e3)%60)
+    };
+    Object.keys(v).forEach(function(k){
+      if(last[k] === v[k]) return;
+      last[k] = v[k];
+      el[k].textContent = v[k];
+      if(!RM && k!=='s'){
+        el[k].classList.remove('tick');
+        void el[k].offsetWidth;
+        el[k].classList.add('tick');
+      }
+    });
+    requestAnimationFrame(function(){ setTimeout(tick, 250); });
+  }
+  tick();
+})();
+
+/* ── 2. Nav: sticky + aktiv sektion + progress ───────────── */
+(function(){
+  var head = $('header'), bar = $('#progress');
+  var links = $$('nav a[href^="#"]');
+  var secs  = links.map(function(a){ return document.getElementById(a.getAttribute('href').slice(1)); });
+  function onScroll(){
+    var y = window.pageYOffset || document.documentElement.scrollTop;
+    head.classList.toggle('stuck', y > 40);
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (max > 0 ? (y/max)*100 : 0) + '%';
+    var best = -1;
+    secs.forEach(function(s,i){
+      if(s && s.getBoundingClientRect().top <= window.innerHeight*0.42) best = i;
+    });
+    links.forEach(function(a,i){ a.classList.toggle('on', i === best); });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll, {passive:true});
+  onScroll();
+})();
+
+/* ── 3. Mobilmenu ────────────────────────────────────────── */
+(function(){
+  var b = $('#burger'), s = $('#sheet');
+  if(!b || !s) return;
+  function set(open){
+    s.classList.toggle('open', open);
+    b.setAttribute('aria-expanded', open ? 'true' : 'false');
+    b.textContent = open ? 'Luk' : 'Menu';
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  b.addEventListener('click', function(){ set(!s.classList.contains('open')); });
+  $$('a', s).forEach(function(a){ a.addEventListener('click', function(){ set(false); }); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') set(false); });
+})();
+
+/* ── 4. Reveal ved scroll (med sikkerhedsnet) ────────────── */
+(function(){
+  var items = $$('.rv');
+  function showAll(){ items.forEach(function(n){ n.classList.add('in'); }); }
+
+  if(RM || !('IntersectionObserver' in window)){ showAll(); return; }
+
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {rootMargin:'0px 0px -12% 0px', threshold:0.08});
+  items.forEach(function(n){ io.observe(n); });
+
+  // Sikkerhedsnet: intet indhold må nogensinde hænge usynligt fast.
+  // Alt over eller i viewporten afsløres ved hver scroll, og efter 4 sek. afsløres resten.
+  function sweep(){
+    var vh = window.innerHeight;
+    items.forEach(function(n){
+      if(n.classList.contains('in')) return;
+      if(n.getBoundingClientRect().top < vh * 0.92){ n.classList.add('in'); io.unobserve(n); }
+    });
+  }
+  window.addEventListener('scroll', sweep, {passive:true});
+  window.addEventListener('resize', sweep, {passive:true});
+  window.addEventListener('load', sweep);
+  setTimeout(showAll, 4000);
+})();
+
+/* ── 5. Tælleanimation i "Arlberg i tal" ─────────────────── */
+(function(){
+  var grid = $('#tal-grid');
+  if(!grid) return;
+  var nums = $$('.v[data-to]', grid);
+  function fmt(n, sep){ return sep ? n.toLocaleString('da-DK') : String(n); }
+  function run(){
+    nums.forEach(function(n){
+      var to  = parseInt(n.getAttribute('data-to'), 10);
+      var sep = n.getAttribute('data-sep');
+      var suf = n.getAttribute('data-suf') || '';
+      var unit = n.querySelector('u');
+      var tail = unit ? unit.outerHTML : '';
+      if(RM){ n.innerHTML = fmt(to, sep) + suf + tail; return; }
+      var t0 = null, dur = 1500;
+      function step(t){
+        if(t0 === null) t0 = t;
+        var p = Math.min((t - t0) / dur, 1);
+        var e = 1 - Math.pow(1 - p, 3);
+        n.innerHTML = fmt(Math.round(to * e), sep) + suf + tail;
+        if(p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  var done = false;
+  function once(){ if(done) return; done = true; run(); }
+
+  if(!('IntersectionObserver' in window)){ once(); return; }
+  var io = new IntersectionObserver(function(es){
+    if(es[0].isIntersecting){ once(); io.disconnect(); }
+  }, {threshold:0.3});
+  io.observe(grid);
+
+  // Samme sikkerhedsnet som ved reveal: tallene må aldrig stå og blinke "0".
+  function sweep(){
+    if(done) return;
+    if(grid.getBoundingClientRect().top < window.innerHeight * 0.92){ once(); io.disconnect(); }
+  }
+  window.addEventListener('scroll', sweep, {passive:true});
+  window.addEventListener('load', sweep);
+  setTimeout(once, 4000);
+})();
+
+/* ── 6. Hero-parallax ────────────────────────────────────── */
+(function(){
+  var img = $('#heroimg');
+  if(!img || RM) return;
+  var busy = false;
+  window.addEventListener('scroll', function(){
+    if(busy) return;
+    busy = true;
+    requestAnimationFrame(function(){
+      var y = window.pageYOffset || 0;
+      if(y < window.innerHeight * 1.25){
+        img.style.transform = 'translate3d(0,' + (y * 0.24).toFixed(1) + 'px,0)';
+      }
+      busy = false;
+    });
+  }, {passive:true});
+})();
+
+/* ── 7. Billeder: pæn nødplan hvis en URL fejler ─────────── */
+(function(){
+  $$('img').forEach(function(im){
+    im.addEventListener('error', function(){
+      im.classList.add('dead');
+      im.setAttribute('data-broken','1');
+    });
+  });
+})();
+
+/* ── 8. Lightbox ─────────────────────────────────────────── */
+(function(){
+  var cells = $$('#gal .cell');
+  if(!cells.length) return;
+  var box=$('#lb'), bi=$('#lb-img'), bt=$('#lb-t'), bs=$('#lb-s'), bc=$('#lb-c');
+  var i = 0, prevFocus = null;
+
+  var data = cells.map(function(c){
+    var im = c.querySelector('img');
+    var cap = c.querySelector('figcaption');
+    return {
+      src: im ? im.getAttribute('src').replace(/resize\/\d+x[\d.]+c/,'resize/2000x1400c') : '',
+      fallback: im ? im.getAttribute('src') : '',
+      alt: im ? im.getAttribute('alt') : '',
+      t: cap ? (cap.querySelector('b')||{}).textContent : '',
+      s: cap ? (cap.querySelector('span')||{}).textContent : ''
+    };
+  });
+
+  function show(n){
+    i = (n + data.length) % data.length;
+    var d = data[i];
+    bi.onerror = function(){ bi.onerror = null; bi.src = d.fallback; };
+    bi.src = d.src; bi.alt = d.alt || d.t;
+    bt.textContent = d.t; bs.textContent = d.s;
+    bc.textContent = (i+1) + ' / ' + data.length;
+  }
+  function open(n){
+    prevFocus = document.activeElement;
+    show(n);
+    box.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    $('#lb-x').focus();
+  }
+  function close(){
+    box.classList.remove('open');
+    document.body.style.overflow = '';
+    if(prevFocus && prevFocus.focus) prevFocus.focus();
+  }
+
+  cells.forEach(function(c, n){
+    c.setAttribute('tabindex','0');
+    c.setAttribute('role','button');
+    c.addEventListener('click', function(){ open(n); });
+    c.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); open(n); }
+    });
+  });
+  $('#lb-x').addEventListener('click', close);
+  $('#lb-pv').addEventListener('click', function(){ show(i-1); });
+  $('#lb-nx').addEventListener('click', function(){ show(i+1); });
+  box.addEventListener('click', function(e){ if(e.target === box) close(); });
+  document.addEventListener('keydown', function(e){
+    if(!box.classList.contains('open')) return;
+    if(e.key === 'Escape') close();
+    if(e.key === 'ArrowLeft') show(i-1);
+    if(e.key === 'ArrowRight') show(i+1);
+  });
+})();
+
+/* ── 9. Værelseslodtrækning ──────────────────────────────── */
+(function(){
+  var cards = $$('#crewgrid .man');
+  var beds  = $$('#beds .bed');
+  var draw  = $('#draw'), reset = $('#reset');
+  if(!cards.length || !beds.length) return;
+
+  var names = cards.map(function(c){
+    var h = c.querySelector('h3');
+    var first = h.childNodes[0].textContent.trim();
+    var last  = (h.querySelector('small')||{}).textContent || '';
+    return { first:first, full:(first+' '+last).trim(), card:c };
+  });
+
+  function paint(pairs){
+    beds.forEach(function(b, n){
+      var who = b.querySelector('.who');
+      var pair = pairs[n] || [];
+      who.innerHTML = '';
+      for(var k = 0; k < 2; k++){
+        var s = document.createElement('span');
+        if(pair[k]){ s.textContent = pair[k]; } else { s.textContent = '—'; s.className = 'q'; }
+        who.appendChild(s);
+      }
+    });
+    var map = {};
+    pairs.forEach(function(p, n){
+      (p||[]).forEach(function(nm){ map[nm] = n+1; });
+    });
+    names.forEach(function(x){
+      var tag = x.card.querySelector('[data-rm]');
+      var r = map[x.full] || map[x.first];
+      if(r){ tag.textContent = 'Værelse ' + (r<10?'0':'') + r; tag.classList.add('set'); }
+      else { tag.textContent = 'Værelse —'; tag.classList.remove('set'); }
+    });
+  }
+
+  function shuffle(a){
+    for(var j = a.length - 1; j > 0; j--){
+      var k = Math.floor(Math.random() * (j+1));
+      var t = a[j]; a[j] = a[k]; a[k] = t;
+    }
+    return a;
+  }
+  function randomPairs(){
+    var pool = shuffle(names.map(function(x){ return x.full; }));
+    var out = [];
+    for(var j = 0; j < pool.length; j += 2) out.push([pool[j], pool[j+1]]);
+    return out.slice(0,4);
+  }
+
+  function animate(){
+    if(RM){ paint(randomPairs()); return; }
+    beds.forEach(function(b){ b.classList.add('roll'); });
+    var n = 0;
+    var spin = setInterval(function(){
+      paint(randomPairs());
+      if(++n > 11){
+        clearInterval(spin);
+        beds.forEach(function(b){ b.classList.remove('roll'); });
+        paint(randomPairs());
+      }
+    }, 80);
+  }
+
+  // Er fordelingen aftalt? Så vises den — ellers står lodtrækningen klar.
+  if(CONFIG.rooms && CONFIG.rooms.length){
+    paint(CONFIG.rooms);
+    draw.textContent = 'Træk lod igen';
+  } else {
+    paint([[],[],[],[]]);
+  }
+  draw.addEventListener('click', animate);
+  reset.addEventListener('click', function(){
+    paint(CONFIG.rooms && CONFIG.rooms.length ? CONFIG.rooms : [[],[],[],[]]);
+  });
+})();
+
+/* ── 10. Snefald ─────────────────────────────────────────── */
+(function(){
+  var c = $('#snow');
+  if(!c || RM || !CONFIG.snow){ if(c) c.style.display = 'none'; return; }
+  var ctx = c.getContext('2d'), w = 0, h = 0, flakes = [], raf;
+
+  function size(){
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = c.width  = Math.floor(window.innerWidth  * dpr);
+    h = c.height = Math.floor(window.innerHeight * dpr);
+    c.style.width  = window.innerWidth + 'px';
+    c.style.height = window.innerHeight + 'px';
+    var n = Math.round(Math.min(window.innerWidth / 14, 90));
+    flakes = [];
+    for(var i = 0; i < n; i++){
+      flakes.push({
+        x: Math.random()*w, y: Math.random()*h,
+        r: (Math.random()*1.9 + 0.5) * dpr,
+        v: (Math.random()*0.45 + 0.18) * dpr,
+        d: Math.random()*Math.PI*2,
+        s: Math.random()*0.014 + 0.004,
+        o: Math.random()*0.42 + 0.12
+      });
+    }
+  }
+  function loop(){
+    ctx.clearRect(0,0,w,h);
+    for(var i = 0; i < flakes.length; i++){
+      var f = flakes[i];
+      f.d += f.s;
+      f.y += f.v;
+      f.x += Math.sin(f.d) * 0.4;
+      if(f.y > h + 6){ f.y = -6; f.x = Math.random()*w; }
+      if(f.x > w + 6) f.x = -6;
+      if(f.x < -6)    f.x = w + 6;
+      ctx.beginPath();
+      ctx.fillStyle = 'rgba(232,242,250,' + f.o + ')';
+      ctx.arc(f.x, f.y, f.r, 0, Math.PI*2);
+      ctx.fill();
+    }
+    raf = requestAnimationFrame(loop);
+  }
+  size();
+  loop();
+  var t;
+  window.addEventListener('resize', function(){
+    clearTimeout(t);
+    t = setTimeout(size, 180);
+  }, {passive:true});
+  document.addEventListener('visibilitychange', function(){
+    if(document.hidden){ cancelAnimationFrame(raf); }
+    else { raf = requestAnimationFrame(loop); }
+  });
+})();
+
+/* ── 11. Ticker: dublér rækken så loopet er sømløst ──────── */
+(function(){
+  var rail = $('#rail');
+  if(!rail) return;
+  rail.innerHTML += rail.innerHTML;
+})();
+
+})();
+</script>
+</body>
+</html>
