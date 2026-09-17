@@ -7,11 +7,11 @@
 <!-- ═══════════════════════════════════════════════════════════════════
      XRT73 SKI · OBERLECH 2027
      Single-file site til GitHub Pages. Læg filen i repo-roden som index.html
-     REDIGÉR HER:  søg efter  "◆ CONFIG"  (længst nede i <script>)
+     REDIGÉR HER:  søg efter  "◆ CONFIG"  (øverst i <script> nederst i filen)
      ═══════════════════════════════════════════════════════════════════ -->
 
 <title>XRT73 Ski · Oberlech 2027 — Burg Hotel, Arlberg 17.–20. januar</title>
-<meta name="description" content="Otte mænd, fire dobbeltværelser og 300 km piste. XRT73 på skitur til Burg Hotel i bilfri Oberlech, Lech am Arlberg, 17.–20. januar 2027.">
+<meta name="description" content="Otte herrer, fire dobbeltværelser og 300 km piste. XRT73 på skitur til Burg Hotel i bilfri Oberlech, Lech am Arlberg, 17.–20. januar 2027.">
 <meta name="author" content="XRT73">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#06080B">
@@ -25,14 +25,14 @@
 <meta property="og:title" content="XRT73 Ski · Oberlech 2027">
 <meta property="og:description" content="Burg Hotel, 1.650 m. Bilfri Oberlech. Ski-in/ski-out. 17.–20. januar 2027.">
 <meta property="og:url" content="https://friisnaes.github.io/xrt73-ski/">
-<meta property="og:image" content="https://www.burghotel-lech.com/%28cms%29/media/resize/1200x630c%2Cq70i/3351277">
+<meta property="og:image" content="https://www.burghotel-lech.com/%28cms%29/media/resize/1200x630c%2Cq70i/2491457">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Burg Hotel i Oberlech en vinterdag">
+<meta property="og:image:alt" content="Piste og bjergstation i Oberlech om vinteren">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="XRT73 Ski · Oberlech 2027">
 <meta name="twitter:description" content="Burg Hotel, 1.650 m. Bilfri Oberlech. Ski-in/ski-out. 17.–20. januar 2027.">
-<meta name="twitter:image" content="https://www.burghotel-lech.com/%28cms%29/media/resize/1200x630c%2Cq70i/3351277">
+<meta name="twitter:image" content="https://www.burghotel-lech.com/%28cms%29/media/resize/1200x630c%2Cq70i/2491457">
 
 <!-- Favicon: XRT-monogram -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2306080B'/%3E%3Cpath d='M8 46 L22 24 L30 34 L42 18 L56 46 Z' fill='%238FC7E8'/%3E%3Cpath d='M42 18 L48 28 L36 28 Z' fill='%23EEF3F8'/%3E%3C/svg%3E">
@@ -73,7 +73,9 @@
 </script>
 
 <style>
-/* ══════════ TOKENS ══════════ */
+/* ══════════ TOKENS ══════════
+   Skriftstørrelserne er samlet her. Skal ALT op eller ned, så ret de fem
+   --fs-* værdier — resten af siden følger med.                            */
 :root{
   --void:#06080B;
   --night:#0A0E13;
@@ -82,14 +84,22 @@
   --line:rgba(255,255,255,.085);
   --line-2:rgba(255,255,255,.16);
   --snow:#EEF3F8;
-  --mute:#8795A5;
-  --mute-2:#5D6A78;
+  --mute:#93A1B1;
+  --mute-2:#6B7885;
   --ice:#8FC7E8;
   --ice-deep:#2E6B91;
-  --brass:#C9A45C;
+  --brass:#D0AB63;
+
   --display:'Anton',Impact,'Haettenschweiler','Arial Narrow','Liberation Sans Narrow','Arial Black',sans-serif;
   --sans:'Space Grotesk',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
   --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+
+  --fs-body:17.5px;      /* løbende tekst          */
+  --fs-mono-xs:11.5px;   /* mindste etiketter      */
+  --fs-mono-sm:13px;     /* etiketter, billedtekst */
+  --fs-mono-md:14px;     /* menu, sektionsnumre    */
+  --fs-small:16px;       /* footer-lister m.m.     */
+
   --pad:clamp(18px,5vw,84px);
   --mtn:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='s' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23122031'/%3E%3Cstop offset='1' stop-color='%23070A0E'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23s)'/%3E%3Cpath d='M0 370 L150 215 L245 292 L380 155 L505 300 L610 240 L800 395 L800 500 L0 500Z' fill='%23162432'/%3E%3Cpath d='M380 155 L420 200 L340 200 Z' fill='%232C4257'/%3E%3Cpath d='M0 430 L180 328 L322 402 L470 296 L642 400 L800 336 L800 500 L0 500Z' fill='%230B131B'/%3E%3C/svg%3E");
 }
@@ -101,7 +111,7 @@ html{
 }
 body{
   margin:0;background:var(--void);color:var(--snow);
-  font-family:var(--sans);font-size:16px;line-height:1.6;
+  font-family:var(--sans);font-size:var(--fs-body);line-height:1.62;
   -webkit-font-smoothing:antialiased;overflow-x:hidden;
 }
 img{display:block;max-width:100%}
@@ -110,10 +120,8 @@ a{color:inherit;text-decoration:none}
 :focus-visible{outline:2px solid var(--ice);outline-offset:3px;border-radius:2px}
 
 /* ══════════ OVERLAYS ══════════ */
-/* Filmkorn. Baggrundspositionen animeres — ikke boksen — så laget aldrig kan
-   skabe overløb eller sidelæns scroll. */
 #grain{
-  position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.055;
+  position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.05;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
   background-repeat:repeat;
   animation:grain 6s steps(6) infinite;
@@ -126,7 +134,7 @@ a{color:inherit;text-decoration:none}
 }
 #snow{position:fixed;inset:0;z-index:2;pointer-events:none}
 #progress{
-  position:fixed;top:0;left:0;height:2px;width:0;z-index:70;
+  position:fixed;top:0;left:0;height:3px;width:0;z-index:70;
   background:linear-gradient(90deg,var(--ice-deep),var(--ice),var(--snow));
   box-shadow:0 0 12px rgba(143,199,232,.6);
 }
@@ -140,43 +148,43 @@ header{
   border-bottom:1px solid transparent;
 }
 header.stuck{
-  background:rgba(6,8,11,.82);backdrop-filter:blur(18px) saturate(140%);
+  background:rgba(6,8,11,.84);backdrop-filter:blur(18px) saturate(140%);
   -webkit-backdrop-filter:blur(18px) saturate(140%);
   border-bottom-color:var(--line);padding-top:11px;padding-bottom:11px;
 }
 .brand{display:flex;align-items:center;gap:11px;flex-shrink:0}
-.brand svg{width:26px;height:26px;flex-shrink:0}
-.brand b{font-family:var(--display);font-size:18px;letter-spacing:.11em;line-height:1}
+.brand svg{width:28px;height:28px;flex-shrink:0}
+.brand b{font-family:var(--display);font-size:21px;letter-spacing:.1em;line-height:1}
 .brand span{
-  font-family:var(--mono);font-size:9.5px;letter-spacing:.22em;color:var(--mute-2);
+  font-family:var(--mono);font-size:var(--fs-mono-xs);letter-spacing:.2em;color:var(--mute-2);
   border-left:1px solid var(--line-2);padding-left:11px;
 }
-nav{display:flex;align-items:center;gap:6px}
+nav{display:flex;align-items:center;gap:4px}
 nav a{
-  font-family:var(--mono);font-size:10.5px;letter-spacing:.17em;text-transform:uppercase;
-  color:var(--mute);padding:9px 13px;border-radius:999px;transition:.25s;
+  font-family:var(--mono);font-size:var(--fs-mono-md);letter-spacing:.11em;text-transform:uppercase;
+  color:var(--mute);padding:9px 13px;border-radius:999px;transition:.25s;white-space:nowrap;
 }
 nav a:hover,nav a.on{color:var(--snow);background:rgba(255,255,255,.07)}
 nav a.cta{color:#04070A;background:var(--ice);font-weight:700}
 nav a.cta:hover{background:var(--snow)}
 #burger{
   display:none;background:none;border:1px solid var(--line-2);border-radius:999px;
-  color:var(--snow);padding:9px 15px;font-family:var(--mono);font-size:10.5px;
-  letter-spacing:.17em;cursor:pointer;
+  color:var(--snow);padding:11px 18px;font-family:var(--mono);font-size:var(--fs-mono-md);
+  letter-spacing:.14em;cursor:pointer;
 }
 #sheet{
   position:fixed;inset:0;z-index:55;background:rgba(6,8,11,.97);
   backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);
-  display:flex;flex-direction:column;justify-content:center;gap:6px;padding:var(--pad);
+  display:flex;flex-direction:column;justify-content:center;gap:4px;padding:var(--pad);
   transform:translateY(-100%);transition:transform .5s cubic-bezier(.76,0,.24,1);
 }
 #sheet.open{transform:translateY(0)}
 #sheet a{
-  font-family:var(--display);font-size:clamp(30px,9vw,54px);letter-spacing:.02em;
-  text-transform:uppercase;padding:8px 0;border-bottom:1px solid var(--line);
+  font-family:var(--display);font-size:clamp(28px,8vw,50px);letter-spacing:.02em;
+  text-transform:uppercase;padding:9px 0;border-bottom:1px solid var(--line);
   display:flex;align-items:baseline;gap:16px;
 }
-#sheet a i{font-family:var(--mono);font-size:11px;color:var(--ice);font-style:normal}
+#sheet a i{font-family:var(--mono);font-size:var(--fs-mono-sm);color:var(--ice);font-style:normal}
 
 /* ══════════ HERO ══════════ */
 #hero{
@@ -184,27 +192,30 @@ nav a.cta:hover{background:var(--snow)}
   justify-content:flex-end;overflow:hidden;padding:0 var(--pad) clamp(26px,4vh,52px);
 }
 .bg{position:absolute;inset:0;z-index:0;overflow:hidden;background:var(--mtn) center/cover no-repeat}
-.bg img{
-  width:100%;height:112%;object-fit:cover;position:absolute;top:-6%;left:0;
-  animation:burns 34s ease-in-out infinite alternate;
+.shots{position:absolute;inset:0}
+.shot{
+  position:absolute;left:0;top:-6%;width:100%;height:112%;object-fit:cover;
+  opacity:0;transition:opacity 2s ease;
 }
+.shot.on{opacity:1;animation:burns 30s ease-in-out infinite alternate}
 @keyframes burns{from{transform:scale(1.04) translate3d(0,0,0)}to{transform:scale(1.15) translate3d(-1.5%,-1.5%,0)}}
+
 /* Scrims: lyse nok til at billedet lever, mørke nok til at typografien altid kan læses */
 .bg::after{
   content:'';position:absolute;inset:0;
   background:
-    linear-gradient(97deg,rgba(6,8,11,.70) 0%,rgba(6,8,11,.30) 38%,rgba(6,8,11,.04) 68%,transparent 100%),
-    linear-gradient(180deg,rgba(6,8,11,.58) 0%,rgba(6,8,11,.10) 15%,rgba(6,8,11,.10) 30%,rgba(6,8,11,.52) 58%,rgba(6,8,11,.88) 85%,var(--void) 100%),
+    linear-gradient(97deg,rgba(6,8,11,.72) 0%,rgba(6,8,11,.32) 38%,rgba(6,8,11,.05) 68%,transparent 100%),
+    linear-gradient(180deg,rgba(6,8,11,.58) 0%,rgba(6,8,11,.10) 15%,rgba(6,8,11,.10) 30%,rgba(6,8,11,.54) 58%,rgba(6,8,11,.88) 85%,var(--void) 100%),
     radial-gradient(150% 100% at 60% 6%,transparent 42%,rgba(6,8,11,.34) 100%);
 }
 /* .bg skal IKKE rammes her — den er absolut placeret baggrund */
 #hero>*:not(.bg){position:relative;z-index:3;text-shadow:0 1px 28px rgba(4,6,9,.6),0 1px 3px rgba(4,6,9,.4)}
 #hero .herostats{text-shadow:none}
-#hero .subline{color:#B3BEC9}
+#hero .subline{color:#BAC5D0}
 
 .eyebrow{
   display:flex;align-items:center;gap:13px;font-family:var(--mono);
-  font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ice);
+  font-size:var(--fs-mono-sm);letter-spacing:.26em;text-transform:uppercase;color:var(--ice);
   margin-bottom:clamp(10px,2vh,20px);
 }
 .eyebrow::before{content:'';width:clamp(26px,6vw,64px);height:1px;background:var(--ice);flex-shrink:0}
@@ -226,8 +237,8 @@ h1 em{
 .subline{
   display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;
   margin:clamp(14px,2.6vh,26px) 0 0;
-  font-family:var(--mono);font-size:clamp(10.5px,1.5vw,13px);
-  letter-spacing:.14em;text-transform:uppercase;color:var(--mute);
+  font-family:var(--mono);font-size:clamp(12px,1.5vw,15px);
+  letter-spacing:.11em;text-transform:uppercase;color:var(--mute);
 }
 .subline b{color:var(--snow);font-weight:400}
 .subline i{color:var(--line-2);font-style:normal}
@@ -238,24 +249,22 @@ h1 em{
   margin-top:clamp(20px,3.4vh,40px);padding-top:clamp(18px,3vh,30px);
   border-top:1px solid var(--line);
 }
-.unit{min-width:62px}
+.unit{min-width:66px}
 .unit .n{
-  font-family:var(--display);font-size:clamp(30px,6.4vw,62px);line-height:.9;
+  font-family:var(--display);font-size:clamp(31px,6.4vw,62px);line-height:.9;
   font-variant-numeric:tabular-nums;letter-spacing:.01em;
 }
 .unit .n.tick{animation:tick .5s ease}
 @keyframes tick{0%{opacity:.35;transform:translateY(-4px)}100%{opacity:1;transform:none}}
 .unit .t{
-  font-family:var(--mono);font-size:9px;letter-spacing:.24em;text-transform:uppercase;
-  color:var(--mute-2);margin-top:6px;
+  font-family:var(--mono);font-size:var(--fs-mono-xs);letter-spacing:.2em;text-transform:uppercase;
+  color:var(--mute-2);margin-top:7px;
 }
 .unit:first-child .n{color:var(--ice)}
-.clock .sep{
-  align-self:stretch;width:1px;background:var(--line);margin:0 clamp(0px,1vw,10px);
-}
+.clock .sep{align-self:stretch;width:1px;background:var(--line);margin:0 clamp(0px,1vw,10px)}
 .clock .goal{
-  margin-left:auto;align-self:flex-end;max-width:210px;
-  font-family:var(--mono);font-size:10px;letter-spacing:.13em;line-height:1.75;
+  margin-left:auto;align-self:flex-end;max-width:250px;
+  font-family:var(--mono);font-size:var(--fs-mono-sm);letter-spacing:.1em;line-height:1.7;
   color:var(--mute-2);text-transform:uppercase;text-align:right;
 }
 .clock .goal b{color:var(--brass);font-weight:400}
@@ -266,47 +275,47 @@ h1 em{
 }
 .herostats>div{
   background:rgba(8,11,15,.6);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
-  padding:clamp(11px,1.8vw,17px) clamp(10px,1.6vw,19px);
+  padding:clamp(12px,1.8vw,18px) clamp(10px,1.6vw,19px);
 }
-.herostats .v{font-family:var(--display);font-size:clamp(17px,2.9vw,31px);line-height:1;letter-spacing:.01em}
+.herostats .v{font-family:var(--display);font-size:clamp(18px,2.9vw,31px);line-height:1;letter-spacing:.01em}
 .herostats .k{
-  font-family:var(--mono);font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--mute-2);margin-top:7px;
+  font-family:var(--mono);font-size:var(--fs-mono-xs);letter-spacing:.16em;text-transform:uppercase;
+  color:var(--mute-2);margin-top:8px;line-height:1.45;
 }
 
 /* ══════════ TICKER ══════════ */
 .ticker{
   border-block:1px solid var(--line);background:var(--night);
-  overflow:hidden;padding:15px 0;position:relative;z-index:4;
+  overflow:hidden;padding:16px 0;position:relative;z-index:4;
 }
-.ticker .rail{display:flex;width:max-content;animation:slide 52s linear infinite}
+.ticker .rail{display:flex;width:max-content;animation:slide 58s linear infinite}
 .ticker:hover .rail{animation-play-state:paused}
 @keyframes slide{to{transform:translateX(-50%)}}
 .ticker span{
-  font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+  font-family:var(--mono);font-size:var(--fs-mono-sm);letter-spacing:.2em;text-transform:uppercase;
   color:var(--mute);padding:0 24px;white-space:nowrap;display:flex;align-items:center;gap:24px;
 }
 .ticker span::after{content:'';width:4px;height:4px;border-radius:50%;background:var(--ice);opacity:.55}
 
 /* ══════════ SECTIONS ══════════ */
 section{padding:clamp(70px,12vh,150px) var(--pad);position:relative;z-index:4}
-#crew,#burg,#tal{scroll-margin-top:72px}
+#crew,#burg,#omraade,#events{scroll-margin-top:74px}
 .head{
   display:grid;grid-template-columns:auto 1fr;gap:clamp(18px,4vw,54px);
   align-items:start;margin-bottom:clamp(38px,6vh,74px);
 }
 .num{
-  font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--ice);
-  padding-top:10px;white-space:nowrap;
+  font-family:var(--mono);font-size:var(--fs-mono-md);letter-spacing:.17em;color:var(--ice);
+  padding-top:11px;white-space:nowrap;
 }
 .head h2{
   font-family:var(--display);font-weight:400;margin:0;text-transform:uppercase;
   font-size:clamp(31px,6.6vw,86px);line-height:.94;letter-spacing:-.008em;
 }
-.head h2 em{font-style:normal;color:#6F7E8E}
+.head h2 em{font-style:normal;color:#77869A}
 .head p{
-  margin:18px 0 0;max-width:58ch;color:var(--mute);
-  font-size:clamp(14.5px,1.5vw,17.5px);line-height:1.72;
+  margin:18px 0 0;max-width:56ch;color:var(--mute);
+  font-size:clamp(16px,1.6vw,19.5px);line-height:1.68;
 }
 .head p b{color:var(--snow);font-weight:500}
 
@@ -317,11 +326,11 @@ section{padding:clamp(70px,12vh,150px) var(--pad);position:relative;z-index:4}
 /* ══════════ CREW ══════════ */
 /* 8 mand → altid et rent gitter: 4×2, 2×4 eller 1×8 */
 .crew{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line)}
-@media (max-width:1040px){.crew{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:1100px){.crew{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:359px){.crew{grid-template-columns:1fr}}
 .man{
   background:var(--night);padding:clamp(20px,2.4vw,28px);position:relative;overflow:hidden;
-  transition:background .45s ease;min-height:214px;display:flex;flex-direction:column;
+  transition:background .45s ease;min-height:248px;display:flex;flex-direction:column;
 }
 .man::before{
   content:'';position:absolute;inset:0;opacity:0;transition:opacity .45s ease;
@@ -330,69 +339,77 @@ section{padding:clamp(70px,12vh,150px) var(--pad);position:relative;z-index:4}
 .man:hover{background:var(--slate)}
 .man:hover::before{opacity:1}
 .man .mono{
-  font-family:var(--display);font-size:clamp(38px,4.6vw,56px);line-height:.82;
+  font-family:var(--display);font-size:clamp(40px,4.6vw,58px);line-height:.82;
   letter-spacing:.01em;
   background:linear-gradient(140deg,var(--snow),var(--ice) 55%,var(--ice-deep));
   -webkit-background-clip:text;background-clip:text;color:transparent;
 }
 .man h3{
-  font-family:var(--sans);font-weight:700;font-size:clamp(17px,1.9vw,21px);
-  margin:auto 0 0;letter-spacing:-.01em;line-height:1.25;
+  font-family:var(--sans);font-weight:700;font-size:clamp(19px,2vw,23px);
+  margin:auto 0 0;letter-spacing:-.01em;line-height:1.22;
 }
-.man h3 small{display:block;font-weight:400;font-size:13px;color:var(--mute-2);margin-top:3px}
+.man h3 small{display:block;font-weight:400;font-size:15px;color:var(--mute-2);margin-top:4px}
 .man .role{
-  font-family:var(--mono);font-size:9.5px;letter-spacing:.17em;text-transform:uppercase;
-  color:var(--ice);margin-top:13px;padding-top:13px;border-top:1px solid var(--line);
+  font-family:var(--mono);font-size:var(--fs-mono-sm);letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ice);margin-top:14px;padding-top:14px;border-top:1px solid var(--line);
+  line-height:1.5;min-height:3.6em;
 }
 .man .rm{
   position:absolute;top:clamp(20px,2.4vw,28px);right:clamp(20px,2.4vw,28px);
-  font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;color:var(--mute-2);
-  border:1px solid var(--line-2);border-radius:999px;padding:4px 10px;
+  font-family:var(--mono);font-size:var(--fs-mono-xs);letter-spacing:.1em;color:var(--mute-2);
+  border:1px solid var(--line-2);border-radius:999px;padding:5px 11px;
   transition:.35s;white-space:nowrap;
 }
 .man .rm.set{color:#04070A;background:var(--brass);border-color:var(--brass)}
+/* De to capi markeres */
+.man.capo{background:#0C1219}
+.man.capo::after{
+  content:'';position:absolute;inset:0 0 auto 0;height:2px;
+  background:linear-gradient(90deg,var(--brass),rgba(208,171,99,0));
+}
+.man.capo .role{color:var(--brass)}
+.man.capo .mono{background:linear-gradient(140deg,#F4E6C6,var(--brass) 58%,#8A6E33);-webkit-background-clip:text;background-clip:text}
 
 /* rooms */
 .rooms{margin-top:clamp(30px,5vh,58px);border:1px solid var(--line);border-radius:4px;overflow:hidden}
 .rooms .bar{
   display:flex;flex-wrap:wrap;align-items:center;gap:14px;
-  padding:16px clamp(16px,2.4vw,26px);background:var(--night);border-bottom:1px solid var(--line);
+  padding:18px clamp(16px,2.4vw,26px);background:var(--night);border-bottom:1px solid var(--line);
 }
 .rooms .bar h4{
-  margin:0;font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;
-  text-transform:uppercase;color:var(--mute);font-weight:400;
+  margin:0;font-family:var(--mono);font-size:var(--fs-mono-sm);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--mute);font-weight:400;line-height:1.7;
 }
 .rooms .bar h4 b{color:var(--snow);font-weight:400}
+.rooms .bar h4 u{text-decoration:none;color:var(--brass)}
 .btn{
-  margin-left:auto;font-family:var(--mono);font-size:10px;letter-spacing:.18em;
+  margin-left:auto;font-family:var(--mono);font-size:var(--fs-mono-xs);letter-spacing:.14em;
   text-transform:uppercase;cursor:pointer;border:1px solid var(--line-2);
-  background:transparent;color:var(--snow);padding:10px 17px;border-radius:999px;transition:.28s;
+  background:transparent;color:var(--mute);padding:11px 17px;border-radius:999px;transition:.28s;
 }
-.btn:hover{background:var(--snow);color:#04070A;border-color:var(--snow)}
-.btn.ghost{margin-left:0;color:var(--mute-2)}
-.btn.ghost:hover{background:transparent;color:var(--snow);border-color:var(--line-2)}
-.beds{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:1px;background:var(--line)}
-.bed{background:var(--slate);padding:clamp(15px,2vw,22px);min-height:118px}
+.btn:hover{background:rgba(255,255,255,.08);color:var(--snow)}
+.beds{display:grid;grid-template-columns:repeat(auto-fit,minmax(176px,1fr));gap:1px;background:var(--line)}
+.bed{background:var(--slate);padding:clamp(16px,2vw,22px);min-height:124px}
 .bed .no{
-  font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;color:var(--brass);
-  text-transform:uppercase;margin-bottom:11px;
+  font-family:var(--mono);font-size:var(--fs-mono-xs);letter-spacing:.16em;color:var(--brass);
+  text-transform:uppercase;margin-bottom:12px;
 }
-.bed .who{font-size:15px;line-height:1.85;color:var(--snow)}
+.bed .who{font-size:16.5px;line-height:1.8;color:var(--snow)}
 .bed .who span{display:block;transition:opacity .3s}
 .bed .who .q{color:var(--mute-2)}
 .bed.roll .who span{opacity:.22}
 
 /* ══════════ BURG ══════════ */
 .facts{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(152px,1fr));gap:1px;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:1px;
   background:var(--line);border-block:1px solid var(--line);margin-bottom:clamp(34px,5vh,60px);
 }
-.facts>div{background:var(--void);padding:clamp(17px,2.2vw,25px)}
-.facts .v{font-family:var(--display);font-size:clamp(23px,3.4vw,40px);line-height:1;color:var(--snow)}
-.facts .v small{font-family:var(--sans);font-size:12px;font-weight:400;color:var(--mute-2);letter-spacing:0}
+.facts>div{background:var(--void);padding:clamp(18px,2.2vw,26px)}
+.facts .v{font-family:var(--display);font-size:clamp(24px,3.4vw,40px);line-height:1;color:var(--snow)}
+.facts .v small{font-family:var(--sans);font-size:14px;font-weight:400;color:var(--mute-2);letter-spacing:0}
 .facts .k{
-  font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--mute-2);margin-top:9px;line-height:1.6;
+  font-family:var(--mono);font-size:var(--fs-mono-xs);letter-spacing:.15em;text-transform:uppercase;
+  color:var(--mute-2);margin-top:10px;line-height:1.55;
 }
 
 /* gallery mosaic */
@@ -413,23 +430,23 @@ section{padding:clamp(70px,12vh,150px) var(--pad);position:relative;z-index:4}
 .cell:hover img{transform:scale(1.055);filter:saturate(1.04) contrast(1.02)}
 .cell img.dead{opacity:0}
 .cell figcaption{
-  position:absolute;inset:auto 0 0 0;padding:clamp(13px,1.8vw,22px);
-  background:linear-gradient(to top,rgba(4,6,9,.93),rgba(4,6,9,.55) 46%,transparent);
+  position:absolute;inset:auto 0 0 0;padding:clamp(14px,1.8vw,22px);
+  background:linear-gradient(to top,rgba(4,6,9,.94),rgba(4,6,9,.58) 46%,transparent);
   pointer-events:none;
 }
 .cell figcaption b{
-  display:block;font-family:var(--display);font-size:clamp(14px,1.7vw,22px);
+  display:block;font-family:var(--display);font-size:clamp(16px,1.8vw,24px);
   text-transform:uppercase;letter-spacing:.02em;line-height:1.05;
 }
 .cell figcaption span{
-  display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.11em;
-  color:var(--mute);margin-top:6px;line-height:1.65;
+  display:block;font-family:var(--mono);font-size:var(--fs-mono-sm);letter-spacing:.06em;
+  color:#A9B6C4;margin-top:7px;line-height:1.55;
 }
 .cell .tag{
-  position:absolute;top:11px;left:11px;z-index:2;font-family:var(--mono);font-size:8.5px;
-  letter-spacing:.2em;text-transform:uppercase;color:var(--snow);
-  background:rgba(6,8,11,.62);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
-  border:1px solid var(--line-2);border-radius:999px;padding:4px 10px;
+  position:absolute;top:12px;left:12px;z-index:2;font-family:var(--mono);font-size:var(--fs-mono-xs);
+  letter-spacing:.16em;text-transform:uppercase;color:var(--snow);
+  background:rgba(6,8,11,.66);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border:1px solid var(--line-2);border-radius:999px;padding:5px 11px;
 }
 
 /* lightbox */
@@ -442,66 +459,111 @@ section{padding:clamp(70px,12vh,150px) var(--pad);position:relative;z-index:4}
 #lb figure{margin:0;max-width:min(1240px,100%);max-height:100%;display:flex;flex-direction:column;gap:15px}
 #lb img{max-width:100%;max-height:78svh;object-fit:contain;border-radius:3px;background:var(--mtn) center/cover}
 #lb figcaption{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline}
-#lb figcaption b{font-family:var(--display);font-size:clamp(17px,2.4vw,27px);text-transform:uppercase;letter-spacing:.02em}
-#lb figcaption span{font-family:var(--mono);font-size:10.5px;letter-spacing:.11em;color:var(--mute)}
+#lb figcaption b{font-family:var(--display);font-size:clamp(19px,2.4vw,29px);text-transform:uppercase;letter-spacing:.02em}
+#lb figcaption span{font-family:var(--mono);font-size:var(--fs-mono-sm);letter-spacing:.06em;color:var(--mute)}
 #lb .x,#lb .pv,#lb .nx{
   position:absolute;border:1px solid var(--line-2);background:rgba(10,14,19,.72);
-  color:var(--snow);width:46px;height:46px;border-radius:50%;cursor:pointer;
-  font-family:var(--mono);font-size:15px;display:grid;place-items:center;transition:.25s;
+  color:var(--snow);width:50px;height:50px;border-radius:50%;cursor:pointer;
+  font-family:var(--mono);font-size:17px;display:grid;place-items:center;transition:.25s;
 }
 #lb .x:hover,#lb .pv:hover,#lb .nx:hover{background:var(--snow);color:#04070A;border-color:var(--snow)}
 #lb .x{top:clamp(14px,3vw,30px);right:clamp(14px,3vw,30px)}
-#lb .pv{left:clamp(10px,2vw,26px);top:50%;margin-top:-23px}
-#lb .nx{right:clamp(10px,2vw,26px);top:50%;margin-top:-23px}
+#lb .pv{left:clamp(10px,2vw,26px);top:50%;margin-top:-25px}
+#lb .nx{right:clamp(10px,2vw,26px);top:50%;margin-top:-25px}
 #lb .ct{
   position:absolute;bottom:clamp(14px,3vw,30px);left:50%;transform:translateX(-50%);
-  font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--mute-2);
+  font-family:var(--mono);font-size:var(--fs-mono-sm);letter-spacing:.16em;color:var(--mute-2);
 }
 
-/* arrival */
+/* arrival / steps */
 .arrive{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(196px,1fr));gap:1px;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(214px,1fr));gap:1px;
   background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden;
   margin-top:clamp(34px,5vh,62px);
 }
-.step{background:var(--night);padding:clamp(19px,2.4vw,27px);position:relative}
+.step{background:var(--night);padding:clamp(20px,2.4vw,28px);position:relative}
 .step .i{
-  font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;color:var(--ice);margin-bottom:13px;
+  font-family:var(--mono);font-size:var(--fs-mono-sm);letter-spacing:.15em;color:var(--ice);margin-bottom:14px;
 }
-.step h5{
-  margin:0 0 9px;font-family:var(--sans);font-weight:700;font-size:16px;letter-spacing:-.01em;
-}
-.step p{margin:0;font-size:13.5px;line-height:1.68;color:var(--mute)}
+.step h5{margin:0 0 10px;font-family:var(--sans);font-weight:700;font-size:18px;letter-spacing:-.01em}
+.step p{margin:0;font-size:15.5px;line-height:1.65;color:var(--mute)}
 .step p b{color:var(--snow);font-weight:500}
 
+/* villages */
+.villages{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden;
+  margin-bottom:clamp(30px,4.5vh,54px);
+}
+.vill{background:var(--night);padding:clamp(18px,2.2vw,24px);position:relative}
+.vill b{
+  display:block;font-family:var(--display);font-size:clamp(20px,2.4vw,28px);
+  text-transform:uppercase;letter-spacing:.015em;line-height:1.05;
+}
+.vill span{
+  display:block;font-family:var(--mono);font-size:var(--fs-mono-xs);letter-spacing:.14em;
+  color:var(--mute-2);margin-top:9px;
+}
+.vill.base{background:#0C1219}
+.vill.base b{color:var(--brass)}
+.vill.base::after{
+  content:'';position:absolute;inset:0 0 auto 0;height:2px;
+  background:linear-gradient(90deg,var(--brass),rgba(208,171,99,0));
+}
+
 /* numbers */
-.tal{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:1px;background:var(--line)}
-.tal>div{background:var(--void);padding:clamp(20px,2.6vw,30px) clamp(14px,2vw,22px);text-align:left}
+.tal{display:grid;grid-template-columns:repeat(auto-fit,minmax(166px,1fr));gap:1px;background:var(--line)}
+.tal>div{background:var(--void);padding:clamp(20px,2.6vw,30px) clamp(14px,2vw,22px)}
 .tal .v{
   font-family:var(--display);font-size:clamp(26px,3.7vw,50px);line-height:1;white-space:nowrap;
   font-variant-numeric:tabular-nums;
   background:linear-gradient(160deg,var(--snow),var(--ice) 78%);
   -webkit-background-clip:text;background-clip:text;color:transparent;
 }
-.tal .v u{text-decoration:none;font-size:.44em;color:var(--mute-2);-webkit-text-fill-color:var(--mute-2);margin-left:3px}
+.tal .v u{text-decoration:none;font-size:.44em;color:var(--mute-2);-webkit-text-fill-color:var(--mute-2);margin-left:4px}
 .tal .k{
-  font-family:var(--mono);font-size:9px;letter-spacing:.19em;text-transform:uppercase;
-  color:var(--mute-2);margin-top:11px;line-height:1.6;
+  font-family:var(--mono);font-size:var(--fs-mono-xs);letter-spacing:.15em;text-transform:uppercase;
+  color:var(--mute-2);margin-top:12px;line-height:1.55;
+}
+
+/* events */
+.events{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:1px;background:var(--line)}
+.ev{
+  background:var(--night);padding:clamp(24px,2.8vw,34px);position:relative;overflow:hidden;
+  transition:background .45s ease;display:flex;flex-direction:column;
+}
+.ev:hover{background:var(--slate)}
+.ev .badge{
+  display:inline-block;font-family:var(--mono);font-size:var(--fs-mono-xs);letter-spacing:.18em;
+  text-transform:uppercase;color:var(--brass);border:1px solid rgba(208,171,99,.42);
+  border-radius:999px;padding:5px 12px;margin-bottom:20px;align-self:flex-start;
+}
+.ev h5{
+  margin:0 0 12px;font-family:var(--display);font-weight:400;text-transform:uppercase;
+  font-size:clamp(21px,2.5vw,31px);line-height:1.04;letter-spacing:.005em;
+}
+.ev p{margin:0;font-size:16px;line-height:1.66;color:var(--mute)}
+.ev p b{color:var(--snow);font-weight:500}
+.ev .meta{
+  margin-top:auto;padding-top:20px;font-family:var(--mono);font-size:var(--fs-mono-xs);
+  letter-spacing:.13em;text-transform:uppercase;color:var(--mute-2);line-height:1.7;
+}
+.ev .n{
+  position:absolute;top:clamp(20px,2.4vw,28px);right:clamp(20px,2.4vw,28px);
+  font-family:var(--display);font-size:clamp(34px,4vw,52px);line-height:1;
+  color:rgba(255,255,255,.055);
 }
 
 /* quote */
-.quote{
-  margin:clamp(52px,9vh,110px) 0 0;padding:clamp(30px,5vw,64px) 0 0;
-  border-top:1px solid var(--line);
-}
+.quote{margin:clamp(52px,9vh,110px) 0 0;padding:clamp(30px,5vw,64px) 0 0;border-top:1px solid var(--line)}
 .quote blockquote{
   margin:0;max-width:24ch;font-family:var(--display);text-transform:uppercase;
   font-size:clamp(27px,5.4vw,66px);line-height:1.02;letter-spacing:-.01em;
 }
 .quote blockquote em{font-style:normal;color:var(--ice)}
 .quote cite{
-  display:block;margin-top:22px;font-family:var(--mono);font-style:normal;
-  font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute-2);
+  display:block;margin-top:24px;font-family:var(--mono);font-style:normal;
+  font-size:var(--fs-mono-sm);letter-spacing:.18em;text-transform:uppercase;color:var(--mute-2);
 }
 
 /* ══════════ FOOTER ══════════ */
@@ -510,15 +572,15 @@ footer{
   background:var(--night);position:relative;z-index:4;
 }
 .fgrid{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(196px,1fr));
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
   gap:clamp(26px,4vw,54px);margin-bottom:clamp(38px,6vh,66px);
 }
 .fgrid h6{
-  margin:0 0 15px;font-family:var(--mono);font-size:9.5px;letter-spacing:.22em;
+  margin:0 0 16px;font-family:var(--mono);font-size:var(--fs-mono-sm);letter-spacing:.18em;
   text-transform:uppercase;color:var(--mute-2);font-weight:400;
 }
-.fgrid ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
-.fgrid li{font-size:14px;color:var(--mute);line-height:1.55}
+.fgrid ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.fgrid li{font-size:var(--fs-small);color:var(--mute);line-height:1.5}
 .fgrid li b{color:var(--snow);font-weight:500}
 .fgrid a{border-bottom:1px solid var(--line-2);padding-bottom:1px;transition:.25s}
 .fgrid a:hover{color:var(--ice);border-color:var(--ice)}
@@ -530,39 +592,41 @@ footer{
 .fbase{
   display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:space-between;
   padding-top:24px;border-top:1px solid var(--line);
-  font-family:var(--mono);font-size:9.5px;letter-spacing:.15em;
+  font-family:var(--mono);font-size:var(--fs-mono-xs);letter-spacing:.13em;
   text-transform:uppercase;color:var(--mute-2);
 }
 
 /* ══════════ RESPONSIVE ══════════ */
-@media (max-width:900px){
+@media (max-width:1080px){
   nav{display:none}
   #burger{display:block}
+}
+@media (max-width:900px){
   .herostats{grid-template-columns:repeat(2,1fr)}
   .head{grid-template-columns:1fr;gap:14px}
   .num{padding-top:0}
   .clock .goal{margin-left:0;text-align:left;width:100%;max-width:none;padding-top:14px}
   .cell,.cell.fill,.cell.w6,.cell.w8,.cell.w12{grid-column:span 12;aspect-ratio:4/3}
   #lb .pv,#lb .nx{top:auto;bottom:clamp(14px,3vw,30px);margin-top:0}
-  #lb .pv{left:calc(50% - 58px)}
-  #lb .nx{right:calc(50% - 58px)}
-  #lb .ct{bottom:78px}
+  #lb .pv{left:calc(50% - 62px)}
+  #lb .nx{right:calc(50% - 62px)}
+  #lb .ct{bottom:82px}
 }
 @media (max-width:560px){
   .unit{min-width:0;flex:1 1 0}
   .clock .sep{display:none}
   .brand span{display:none}
-  .eyebrow{letter-spacing:.2em}
+  .eyebrow{letter-spacing:.18em}
   .eyebrow::before{display:none}
   /* Kompakte mandekort: badge ud af hjørnet og ned i flowet */
-  .man{min-height:0;padding:17px 16px}
-  .man .mono{font-size:36px}
-  .man h3{margin-top:13px;font-size:17px}
-  .man h3 small{font-size:12.5px}
-  .man .role{margin-top:11px;padding-top:11px;font-size:9px;letter-spacing:.13em}
-  .man .rm{position:static;display:inline-block;margin-top:12px;font-size:9px}
+  .man{min-height:0;padding:18px 16px}
+  .man .mono{font-size:38px}
+  .man h3{margin-top:14px;font-size:18px}
+  .man .role{margin-top:12px;padding-top:12px;min-height:0;letter-spacing:.07em}
+  .man .rm{position:static;display:inline-block;margin-top:13px}
   .bed{min-height:0}
   .btn{flex:1 1 auto;margin-left:0}
+  .ev .n{font-size:34px}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
@@ -588,7 +652,8 @@ footer{
   <nav aria-label="Sektioner">
     <a href="#crew">Besætningen</a>
     <a href="#burg">Burg Hotel</a>
-    <a href="#tal">Arlberg i tal</a>
+    <a href="#omraade">Området</a>
+    <a href="#events">Events</a>
     <a class="cta" href="https://www.burghotel-lech.com/" target="_blank" rel="noopener">Hotellet ↗</a>
   </nav>
   <button id="burger" aria-expanded="false" aria-controls="sheet">Menu</button>
@@ -597,16 +662,23 @@ footer{
 <div id="sheet" role="dialog" aria-modal="true" aria-label="Menu">
   <a href="#crew"><i>01</i> Besætningen</a>
   <a href="#burg"><i>02</i> Burg Hotel</a>
-  <a href="#tal"><i>03</i> Arlberg i tal</a>
+  <a href="#omraade"><i>03</i> Området</a>
+  <a href="#events"><i>04</i> Events</a>
   <a href="https://www.burghotel-lech.com/" target="_blank" rel="noopener"><i>↗</i> Hotellet</a>
 </div>
 
 <!-- ══════════ HERO ══════════ -->
 <main>
 <section id="hero">
+  <!-- Vinterbilleder fra hotellets eget arkiv. Krydsfader hvert 7. sekund.
+       Skift, byt om eller slet linjer i CONFIG.hero nede i <script>. -->
   <div class="bg" aria-hidden="true">
-    <img id="heroimg" src="https://www.burghotel-lech.com/%28cms%29/media/resize/2000x1200c%2Cq70i/3351277"
-         alt="" referrerpolicy="no-referrer" fetchpriority="high" decoding="async">
+    <div class="shots" id="shots">
+      <img class="shot on" src="https://www.burghotel-lech.com/%28cms%29/media/resize/2000x1200c%2Cq70i/2491457" alt="" referrerpolicy="no-referrer" fetchpriority="high" decoding="async">
+      <img class="shot" src="https://www.burghotel-lech.com/%28cms%29/media/resize/2000x1200c%2Cq70i/2488253" alt="" referrerpolicy="no-referrer" decoding="async">
+      <img class="shot" src="https://www.burghotel-lech.com/%28cms%29/media/resize/2000x1200c%2Cq70i/2491413" alt="" referrerpolicy="no-referrer" decoding="async">
+      <img class="shot" src="https://www.burghotel-lech.com/%28cms%29/media/resize/2000x1200c%2Cq70i/2491423" alt="" referrerpolicy="no-referrer" decoding="async">
+    </div>
   </div>
 
   <p class="eyebrow">XRT73 · Skitur · Lech am Arlberg, Østrig</p>
@@ -646,10 +718,12 @@ footer{
 <!-- ══════════ TICKER ══════════ -->
 <div class="ticker" aria-hidden="true">
   <div class="rail" id="rail">
-    <span>Bilfri ankomst</span><span>Ski-in / ski-out</span><span>1.550 m² spa</span>
-    <span>300 km piste</span><span>5-retters gourmet</span><span>Der Weiße Ring</span>
-    <span>Kriegeralpe · 2.000 m</span><span>Eisbar No.1</span><span>Fuld pension</span>
-    <span>85 lifte</span><span>Valluga 2.811 m</span><span>Tredje generation Lucian</span>
+    <span>Chauffør fra München</span><span>Bilfri ankomst</span><span>Ski-in / ski-out</span>
+    <span>Skileje i kælderen</span><span>Eisbar No.1</span><span>1.550 m² spa</span>
+    <span>300 km piste</span><span>5-retters gourmet</span><span>Rørt tatar på terrassen</span>
+    <span>Der Weiße Ring</span><span>Kriegeralpe · 2.000 m</span><span>Mooserwirt</span>
+    <span>Vinkælderen</span><span>85 lifte</span><span>Valluga 2.811 m</span>
+    <span>Tredje generation Lucian</span>
   </div>
 </div>
 
@@ -658,27 +732,67 @@ footer{
   <div class="head rv">
     <div class="num">01 — Besætningen</div>
     <div>
-      <h2>Otte mænd.<br>Fire værelser.<br><em>Ét bjerg.</em></h2>
-      <p>Samlet står der over 500 år på bagen af den her gruppe — og ikke én af dem har planer om at tage den med ro. <b>Fire dobbeltværelser</b> er reserveret på Burg. Fordelingen er til forhandling. Eller til lodtrækning.</p>
+      <h2>Otte herrer.<br>Fire værelser.<br><em>Ét bjerg.</em></h2>
+      <p>Samlet står der over 500 år på bagen af den her gruppe — og ikke én af dem har planer om at tage den med ro. Titlerne er fordelt, ansvaret er placeret, og <b>de to capi</b> har taget værelsesfordelingen på sig.</p>
     </div>
   </div>
 
   <div class="crew rv" id="crewgrid">
-    <article class="man"><div class="mono">MA</div><h3>Morten<small>Axel</small></h3><div class="role">Chef de Piste</div><div class="rm" data-rm>Værelse —</div></article>
-    <article class="man"><div class="mono">JF</div><h3>Jes<small>Frydendall</small></h3><div class="role">Vinansvarlig</div><div class="rm" data-rm>Værelse —</div></article>
-    <article class="man"><div class="mono">TF</div><h3>Thomas<small>Friisnæs</small></h3><div class="role">Rejseleder &amp; bødemester</div><div class="rm" data-rm>Værelse —</div></article>
-    <article class="man"><div class="mono">HH</div><h3>Henrik<small>Holtegaard</small></h3><div class="role">Transfer &amp; logistik</div><div class="rm" data-rm>Værelse —</div></article>
-    <article class="man"><div class="mono">KK</div><h3>Kim<small>Kehlet Johansen</small></h3><div class="role">Après-ski-general</div><div class="rm" data-rm>Værelse —</div></article>
-    <article class="man"><div class="mono">TS</div><h3>Torben<small>Spuur Jensen</small></h3><div class="role">Vejrmelder</div><div class="rm" data-rm>Værelse —</div></article>
-    <article class="man"><div class="mono">NL</div><h3>Nis<small>Juhl Lorenzen</small></h3><div class="role">Fotograf</div><div class="rm" data-rm>Værelse —</div></article>
-    <article class="man"><div class="mono">MS</div><h3>Michael<small>Steffens</small></h3><div class="role">Musik &amp; stemning</div><div class="rm" data-rm>Værelse —</div></article>
+    <article class="man capo">
+      <div class="mono">KK</div>
+      <h3>Kim<small>Kehlet Johansen</small></h3>
+      <div class="role">Capo di tutti capi<br>· Transportchef</div>
+      <div class="rm" data-rm>Værelse —</div>
+    </article>
+    <article class="man capo">
+      <div class="mono">TF</div>
+      <h3>Thomas<small>Friisnæs</small></h3>
+      <div class="role">Capo<br>· Hotelchef</div>
+      <div class="rm" data-rm>Værelse —</div>
+    </article>
+    <article class="man">
+      <div class="mono">MA</div>
+      <h3>Morten<small>Axel</small></h3>
+      <div class="role">Chef de Piste</div>
+      <div class="rm" data-rm>Værelse —</div>
+    </article>
+    <article class="man">
+      <div class="mono">JF</div>
+      <h3>Jes<small>Frydendall</small></h3>
+      <div class="role">Après-ski<br>Generalissimo</div>
+      <div class="rm" data-rm>Værelse —</div>
+    </article>
+    <article class="man">
+      <div class="mono">TS</div>
+      <h3>Torben<small>Spuur Jensen</small></h3>
+      <div class="role">Vinansvarlig</div>
+      <div class="rm" data-rm>Værelse —</div>
+    </article>
+    <article class="man">
+      <div class="mono">HH</div>
+      <h3>Henrik<small>Holtegaard</small></h3>
+      <div class="role">Vores allesammens<br>Legal Council</div>
+      <div class="rm" data-rm>Værelse —</div>
+    </article>
+    <article class="man">
+      <div class="mono">NL</div>
+      <h3>Nis<small>Juhl Lorenzen</small></h3>
+      <div class="role">Fotografissimius<br>Superiore</div>
+      <div class="rm" data-rm>Værelse —</div>
+    </article>
+    <article class="man">
+      <div class="mono">MS</div>
+      <h3>Michael<small>Steffens</small></h3>
+      <div class="role">Fotografissimius<br>· Lægeekspert</div>
+      <div class="rm" data-rm>Værelse —</div>
+    </article>
   </div>
 
   <div class="rooms rv">
     <div class="bar">
-      <h4>Værelsesfordeling · <b>4 × dobbeltværelse</b> · Burg Hotel</h4>
-      <button class="btn" id="draw">Træk lod</button>
-      <button class="btn ghost" id="reset">Nulstil</button>
+      <h4>4 × dobbeltværelse · Fordelingen forestås af <u>de to capi</u> og meldes ud <b>in due time</b></h4>
+      <button class="btn" id="draw">Uofficiel lodtrækning</button>
+      <button class="btn" id="reset">Nulstil</button>
     </div>
     <div class="beds" id="beds">
       <div class="bed"><div class="no">Værelse 01</div><div class="who"><span class="q">—</span><span class="q">—</span></div></div>
@@ -695,8 +809,8 @@ footer{
     <div class="num">02 — Kvarteret</div>
     <div>
       <h2>Burg Hotel.<br>Fem stjerner,<br><em>1.650 m oppe.</em></h2>
-      <p>Tredje generation af familien <b>Lucian</b> driver Burg Hotel på solsiden af Oberlech — direkte på pisten, med liften som nærmeste nabo. Fra december til april er Oberlech <b>helt bilfrit</b>: man parkerer nede i Lech, tager svævebanen op, og bagagen bliver hentet i ankomsthallen. Hotellerne deroppe er forbundet af et tunnelsystem, så man aldrig behøver ud i kulden for at komme rundt.</p>
-      <p>Indenfor venter <b>1.550 m² spa</b> med saunaer, dampbad, infrarød og snekabine, en udendørs pool med udsigt over Lech-dalen, eget bageri — og en håndfuld restauranter: Burg Restaurant til gourmet, den hauben-belønnede Lechtaler Stube, Burg Schenke, Eisbar No.1 og hotellets egen <b>Kriegeralpe i 2.000 meters højde</b>.</p>
+      <p>Tredje generation af familien <b>Lucian</b> driver Burg Hotel på solsiden af Oberlech — direkte på pisten, med liften som nærmeste nabo. Fra december til april er Oberlech <b>helt bilfrit</b>: chaufføren sætter os af nede i Lech, svævebanen tager os op, og bagagen bliver hentet i ankomstniveauet. Hotellerne deroppe er forbundet af et tunnelsystem, så man aldrig behøver ud i kulden for at komme rundt.</p>
+      <p>Skiene bliver i huset: <b>Skiverleih &amp; Skiservice Walch</b> ligger i hotellets kælder, med skabe og støvletørrere i Burg Skistall — og skiskolen ligger lige uden for døren. Liftkort kan købes i receptionen. <b>Eisbar No.1</b> er afterski-baren, åben dagligt fra kl. 10 til 19 — og sommetider til midnat. Dertil <b>1.550 m² spa</b> med saunaer, dampbad, infrarød og snekabine, udendørs pool, eget bageri, egen vinkælder og hotellets egen <b>Kriegeralpe i 2.000 meters højde</b>.</p>
     </div>
   </div>
 
@@ -704,65 +818,65 @@ footer{
     <div><div class="v">★★★★★</div><div class="k">Fem stjerner</div></div>
     <div><div class="v">1.650<small> m</small></div><div class="k">Over havet</div></div>
     <div><div class="v">1.550<small> m²</small></div><div class="k">Spa &amp; wellness</div></div>
-    <div><div class="v">3.</div><div class="k">Generation Lucian</div></div>
+    <div><div class="v">10–19</div><div class="k">Eisbar No.1<br>dagligt</div></div>
     <div><div class="v">0</div><div class="k">Biler i Oberlech<br>dec – apr</div></div>
-    <div><div class="v">5</div><div class="k">Retter til aften</div></div>
+    <div><div class="v">3.</div><div class="k">Generation Lucian</div></div>
   </div>
 
   <div class="gal rv" id="gal">
     <figure class="cell w8" data-i="0">
-      <span class="tag">Spa</span>
-      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/1400x790c%2Cq70i/3351281" alt="Udendørs pool på Burg Hotel med udsigt over bjergene" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-      <figcaption><b>Udendørs pool</b><span>Opvarmet, i det fri, 1.650 m over havet</span></figcaption>
+      <span class="tag">Afterski</span>
+      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/1400x790c%2Cq70i/2881525" alt="Après-ski på Burg Hotel i Oberlech" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <figcaption><b>Eisbar No.1</b><span>Afterski-baren på hotellet · dagligt 10–19, sommetider til midnat</span></figcaption>
     </figure>
     <figure class="cell fill" data-i="1">
-      <span class="tag">Terrassen</span>
-      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/900x680c%2Cq70i/3151041" alt="Gæster på solterrassen med panoramaudsigt" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-      <figcaption><b>Solterrassen</b><span>Panorama over Lech-dalen</span></figcaption>
+      <span class="tag">Afterski</span>
+      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/900x680c%2Cq70i/2881521" alt="Stemning i Eisbar No.1" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <figcaption><b>Isbaren</b><span>Overdækket lounge, varmelamper, tag der kan køres tilbage</span></figcaption>
     </figure>
     <figure class="cell" data-i="2">
+      <span class="tag">Afterski</span>
+      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/900x680c%2Cq70i/2491393" alt="Gæster med drinks i baren på Burg Hotel" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <figcaption><b>Scenen</b><span>DJ og livemusik hver uge i sæsonen</span></figcaption>
+    </figure>
+    <figure class="cell" data-i="3">
+      <span class="tag">Vinteren</span>
+      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/900x680c%2Cq70i/2881491" alt="Vinterferie og fest på Burg Hotel i Oberlech" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <figcaption><b>Burg om vinteren</b><span>Januar i Oberlech</span></figcaption>
+    </figure>
+    <figure class="cell" data-i="4">
       <span class="tag">Værelser</span>
       <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/900x680c%2Cq70i/2462581" alt="Værelse på Burg Hotel Oberlech" loading="lazy" decoding="async" referrerpolicy="no-referrer">
       <figcaption><b>Værelserne</b><span>Fire dobbeltværelser er vores</span></figcaption>
     </figure>
-    <figure class="cell" data-i="3">
-      <span class="tag">Wellness</span>
-      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/900x680c%2Cq70i/3362009" alt="Wellnessområdet på Burg Hotel" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-      <figcaption><b>Wellness-oasen</b><span>Sauna · dampbad · infrarød · snekabine</span></figcaption>
-    </figure>
-    <figure class="cell" data-i="4">
-      <span class="tag">Spa</span>
-      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/900x680c%2Cq70i/2557529" alt="Afslapning i spaen" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-      <figcaption><b>1.550 m²</b><span>Efter sidste nedkørsel</span></figcaption>
-    </figure>
     <figure class="cell w6" data-i="5">
-      <span class="tag">Middag</span>
-      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/1100x740c%2Cq70i/2874761" alt="Middag med venner på Burg Hotel" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-      <figcaption><b>Middag med vennerne</b><span>Fem retter. Hver aften. Fuld pension</span></figcaption>
+      <span class="tag">Spa</span>
+      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/1100x740c%2Cq70i/3351281" alt="Udendørs pool på Burg Hotel med bjergudsigt" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <figcaption><b>Udendørs pool</b><span>Opvarmet, i det fri, 1.650 m over havet</span></figcaption>
     </figure>
     <figure class="cell w6" data-i="6">
-      <span class="tag">Vin</span>
-      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/1100x740c%2Cq70i/2881427" alt="Vin og fine dining" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-      <figcaption><b>Vinkælderen</b><span>Lechtaler Stube · haube-belønnet</span></figcaption>
+      <span class="tag">Wellness</span>
+      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/1100x740c%2Cq70i/3362009" alt="Wellnessområdet på Burg Hotel" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <figcaption><b>1.550 m² spa</b><span>Sauna · dampbad · infrarød · snekabine</span></figcaption>
     </figure>
     <figure class="cell" data-i="7">
-      <span class="tag">Gourmet</span>
-      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/900x680c%2Cq70i/3151051" alt="Gourmetret på Burg Restaurant" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-      <figcaption><b>Burg Restaurant</b><span>Regionalt · mediterrant · fransk</span></figcaption>
+      <span class="tag">Middag</span>
+      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/900x680c%2Cq70i/2874761" alt="Middag med venner på Burg Hotel" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <figcaption><b>Middag med vennerne</b><span>Fem retter. Hver aften. Fuld pension</span></figcaption>
     </figure>
     <figure class="cell" data-i="8">
-      <span class="tag">Après</span>
-      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/900x680c%2Cq70i/2881423" alt="Après-ski på Burg Hotel" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-      <figcaption><b>Après-ski</b><span>Fra pisten direkte ind i Burg Schenke</span></figcaption>
+      <span class="tag">Vin</span>
+      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/900x680c%2Cq70i/2881427" alt="Vin og fine dining på Burg Hotel" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <figcaption><b>Vinkælderen</b><span>Rundvisning står på ønskelisten</span></figcaption>
     </figure>
     <figure class="cell" data-i="9">
-      <span class="tag">Sent</span>
-      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/900x680c%2Cq70i/2764451" alt="Aften på Burg Hotel" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-      <figcaption><b>Eisbar No.1</b><span>Lukker ikke af sig selv</span></figcaption>
+      <span class="tag">Schenke</span>
+      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/900x680c%2Cq70i/2491331" alt="Burg Schenke — urig hyttestemning" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <figcaption><b>Burg Schenke</b><span>17–01 · fondue, raclette og fællessang</span></figcaption>
     </figure>
     <figure class="cell w12" data-i="10">
       <span class="tag">Arlberg</span>
-      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/1800x780c%2Cq70i/3150957" alt="Vinterlandskab omkring Oberlech" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <img src="https://www.burghotel-lech.com/%28cms%29/media/resize/1800x780c%2Cq70i/2491413" alt="Vinterlandskab omkring Oberlech" loading="lazy" decoding="async" referrerpolicy="no-referrer">
       <figcaption><b>Arlberg, januar</b><span>17 snedage i måneden · −1,9 °C om dagen · −9,6 °C om natten</span></figcaption>
     </figure>
   </div>
@@ -774,31 +888,40 @@ footer{
       <p>Ca. <b>1 t 40 min</b> i luften. München er nærmeste store lufthavn med gode danske afgange.</p>
     </div>
     <div class="step">
-      <div class="i">02 — Transfer</div>
+      <div class="i">02 — Chauffør</div>
       <h5>München → Lech</h5>
-      <p><b>243 km, ca. 3 timer</b>. Kør via Kufstein/Inndalen eller Memmingen–Lindau — Warth-passet er lukket om vinteren.</p>
+      <p><b>243 km, ca. 3 timer</b> — vi har chauffør begge veje, så ingen skal parkere. Ruten går via Kufstein/Inndalen eller Memmingen–Lindau; Warth-passet er lukket om vinteren.</p>
     </div>
     <div class="step">
-      <div class="i">03 — Parkering</div>
-      <h5>Anger P-hus, Lech</h5>
-      <p>Opvarmet P-hus med <b>600+ pladser</b>, åbent 24/7, lige over for Lechwelten. Her stopper bilen.</p>
+      <div class="i">03 — Dalstationen</div>
+      <h5>Afsat i Lech</h5>
+      <p>Oberlech er <b>bilfrit december–april</b>. Bagagen afleveres i ankomstniveauet og bliver bragt op for os.</p>
     </div>
     <div class="step">
       <div class="i">04 — Op</div>
       <h5>Bergbahn Oberlech</h5>
-      <p>Svævebanen op på <b>få minutter</b>. Bagagen hentes i ankomstniveauet, og en tunnel fører tørskoet til Burg.</p>
+      <p>Svævebanen op på <b>få minutter</b>, og en tunnel fører tørskoet direkte ind i Burg. Liftkort købes i receptionen.</p>
     </div>
   </div>
 </section>
 
-<!-- ══════════ 03 · TAL ══════════ -->
-<section id="tal">
+<!-- ══════════ 03 · OMRÅDET ══════════ -->
+<section id="omraade">
   <div class="head rv">
-    <div class="num">03 — Arlberg i tal</div>
+    <div class="num">03 — Området</div>
     <div>
-      <h2>Ski Arlberg.<br><em>Det største i Østrig.</em></h2>
-      <p>Lech, Oberlech, Zürs, Zug, St. Anton, St. Christoph, Stuben, Warth og Schröcken hænger sammen i ét liftsystem — siden Flexenbahn åbnede i 2016 kan man køre hele vejen rundt uden at sætte støvlerne i en bus.</p>
+      <h2>Warth til<br>St. Anton.<br><em>Ét liftkort.</em></h2>
+      <p>Seks byer hænger sammen i ét system — siden Flexenbahn åbnede i 2016 kan man køre hele vejen fra Warth til St. Anton uden at sætte støvlerne i en bus. Vi bor i midten, i <b>Oberlech</b>, med pisten uden for døren.</p>
     </div>
+  </div>
+
+  <div class="villages rv">
+    <div class="vill"><b>Warth</b><span>1.495 m · nordspidsen</span></div>
+    <div class="vill base"><b>Oberlech</b><span>1.650 m · base camp</span></div>
+    <div class="vill"><b>Lech</b><span>1.450 m · nede i dalen</span></div>
+    <div class="vill"><b>Zürs</b><span>1.720 m · over trægrænsen</span></div>
+    <div class="vill"><b>St. Christoph</b><span>1.800 m · højest af byerne</span></div>
+    <div class="vill"><b>St. Anton</b><span>1.300 m · og Mooserwirt</span></div>
   </div>
 
   <div class="tal rv" id="tal-grid">
@@ -806,8 +929,50 @@ footer{
     <div><div class="v" data-to="200" data-suf=" km">0</div><div class="k">Off-piste &amp; ruter</div></div>
     <div><div class="v" data-to="85">0</div><div class="k">Lifte &amp; svævebaner</div></div>
     <div><div class="v" data-to="2811" data-sep="1">0<u>m</u></div><div class="k">Valluga · højeste punkt</div></div>
-    <div><div class="v" data-to="1542" data-sep="1">0<u>m</u></div><div class="k">Fald fra top til bund</div></div>
-    <div><div class="v" data-to="22" data-suf=" km">0</div><div class="k">Der Weiße Ring<br>· 5.500 hm · 5 lifte</div></div>
+    <div><div class="v" data-to="1450" data-sep="1">0<u>m</u></div><div class="k">Lavest fra Oberlech</div></div>
+    <div><div class="v" data-to="6">0</div><div class="k">Byer på samme kort</div></div>
+  </div>
+</section>
+
+<!-- ══════════ 04 · EVENTS ══════════ -->
+<section id="events">
+  <div class="head rv">
+    <div class="num">04 — Special events</div>
+    <div>
+      <h2>Fire ting,<br>der måske<br><em>kommer til at ske.</em></h2>
+      <p>Intet af det er booket. Alt af det er på ønskelisten. <b>Hotelchefen tager Burg-delen</b>, resten afgøres af vejret, benene og hvor sent det blev aftenen før.</p>
+    </div>
+  </div>
+
+  <div class="events rv">
+    <article class="ev">
+      <div class="n">01</div>
+      <span class="badge">På ønskelisten</span>
+      <h5>Rørt tatar<br>på terrassen</h5>
+      <p>Solterrassen på Burg, rørt ved bordet, med panorama ned over Lech-dalen. Frokosten der ikke behøver et argument.</p>
+      <div class="meta">Burg Hotel · Solterrassen<br>1.650 m</div>
+    </article>
+    <article class="ev">
+      <div class="n">02</div>
+      <span class="badge">Måske</span>
+      <h5>Rundvisning i vinkælderen</h5>
+      <p>Burgs egen vinkælder under hotellet. <b>Vinansvarlig</b> stiller spørgsmålene — de øvrige syv nikker og smager.</p>
+      <div class="meta">Burg Hotel · Weinkeller<br>Aftales med hotellet</div>
+    </article>
+    <article class="ev">
+      <div class="n">03</div>
+      <span class="badge">Måske</span>
+      <h5>Der Weiße Ring</h5>
+      <p>Alpernes mest legendariske rundtur: <b>22 km</b> og 5.500 højdemeter via fem lifte, rundt om Omeshorn gennem Zürs, Zug og tilbage til Lech.</p>
+      <div class="meta">22 km · 5.500 hm · 5 lifte<br>Hele runden på én dag</div>
+    </article>
+    <article class="ev">
+      <div class="n">04</div>
+      <span class="badge">Måske</span>
+      <h5>Mooserwirt,<br>St. Anton</h5>
+      <p>Verdens mest berømte afterski-bar, på pisten ned mod St. Anton. En time derinde, og hjemturen bliver en helt anden historie.</p>
+      <div class="meta">St. Anton · 1.300 m<br>Efter sidste nedkørsel</div>
+    </article>
   </div>
 
   <div class="quote rv">
@@ -838,7 +1003,7 @@ footer{
         <li><b>17.–20. januar 2027</b></li>
         <li>3 nætter · fuld pension</li>
         <li>4 × dobbeltværelse</li>
-        <li>8 deltagere</li>
+        <li>8 deltagere · chauffør t/r</li>
       </ul>
     </div>
     <div>
@@ -854,7 +1019,7 @@ footer{
     <div>
       <h6>Inden afgang</h6>
       <ul>
-        <li><a href="https://www.lechzuers.com/en/webcams" target="_blank" rel="noopener">Webcams i Lech ↗</a></li>
+        <li><a href="https://www.burghotel-lech.com/de/burg/impressionen/#webcam" target="_blank" rel="noopener">Burgs webcam ↗</a></li>
         <li><a href="https://www.skiarlberg.at/en/lech-zuers/tickets-season-times/prices-tickets-winter" target="_blank" rel="noopener">Liftkort &amp; priser ↗</a></li>
         <li><a href="https://www.skiarlberg.at/en/lech-zuers/getting-here-parking/oberlech" target="_blank" rel="noopener">Ankomst til Oberlech ↗</a></li>
         <li><a href="https://www.derweissering.ski/en" target="_blank" rel="noopener">Der Weiße Ring ↗</a></li>
@@ -867,8 +1032,8 @@ footer{
         <li>Januar: <b>−1,9 °C</b> / −9,6 °C</li>
         <li>Solopgang 07:55 · solnedgang 16:59</li>
         <li>3-dages liftkort ca. <b>€ 241</b><sup>*</sup></li>
-        <li>Oberlech er bilfrit dec–apr</li>
-        <li><sup>*</sup>2025/26-pris, 2026/27 offentliggøres i efteråret</li>
+        <li>Skileje i hotellets kælder</li>
+        <li><sup>*</sup>2025/26-pris; 2026/27 offentliggøres i efteråret</li>
       </ul>
     </div>
   </div>
@@ -890,15 +1055,24 @@ footer{
    ◆ CONFIG — ret kun her
    ═══════════════════════════════════════════════════════════ */
 var CONFIG = {
+
   // Afgangstidspunkt (ISO med tidszone). Nedtællingen kører mod dette.
   departure: '2027-01-17T08:00:00+01:00',
 
-  // Værelsesfordeling. Sæt navne ind når den er aftalt, fx:
-  //   rooms: [['Thomas','Morten'],['Jes','Henrik'],['Kim','Torben'],['Nis','Michael']]
-  // Lad den stå som null, så bliver "Træk lod"-knappen aktiv i stedet.
+  // Baggrundsbilleder i hero. Billed-ID'er fra hotellets eget arkiv,
+  // alle fra deres vintersider. Skift rækkefølge, slet eller tilføj frit.
+  // Flere vinter-ID'er at prøve:
+  //   2491421  2491455  2491341  2491409  2491339  2491417
+  //   2495499  2491321  2495679  2498303  2881491
+  hero: ['2491457','2488253','2491413','2491423'],
+  heroInterval: 7000,   // millisekunder mellem billedskift
+
+  // Værelsesfordeling. Når capi'erne har meldt ud, skriv den ind her:
+  //   rooms: [['Thomas','Kim'],['Jes','Torben'],['Morten','Henrik'],['Nis','Michael']]
+  // Lad den stå som null indtil da.
   rooms: null,
 
-  snow: true          // sæt til false for at slukke snefaldet
+  snow: true            // sæt til false for at slukke snefaldet
 };
 /* ═══════════════════════════════════════════════════════════ */
 
@@ -947,7 +1121,51 @@ var $$ = function(s,r){ return Array.prototype.slice.call((r||document).querySel
   tick();
 })();
 
-/* ── 2. Nav: sticky + aktiv sektion + progress ───────────── */
+/* ── 2. Hero: byg billedstakken fra CONFIG og krydsfad ───── */
+(function(){
+  var box = $('#shots');
+  if(!box) return;
+  var ids = CONFIG.hero;
+
+  // Genopbyg kun hvis CONFIG afviger fra markup'en, så no-JS stadig ser et billede
+  if(Object.prototype.toString.call(ids) === '[object Array]' && ids.length){
+    var current = $$('.shot', box).map(function(im){
+      var m = im.getAttribute('src').match(/\/(\d+)$/); return m ? m[1] : '';
+    }).join(',');
+    if(current !== ids.join(',')){
+      box.innerHTML = '';
+      ids.forEach(function(id, i){
+        var im = document.createElement('img');
+        im.className = 'shot' + (i === 0 ? ' on' : '');
+        im.src = 'https://www.burghotel-lech.com/%28cms%29/media/resize/2000x1200c%2Cq70i/' + id;
+        im.alt = ''; im.decoding = 'async';
+        im.setAttribute('referrerpolicy','no-referrer');
+        if(i === 0) im.setAttribute('fetchpriority','high');
+        box.appendChild(im);
+      });
+    }
+  }
+
+  // Billeder der ikke kan hentes, tages ud af rotationen
+  var shots = $$('.shot', box);
+  shots.forEach(function(im){
+    im.addEventListener('error', function(){ im.dataset.dead = '1'; im.classList.remove('on'); });
+  });
+
+  if(RM || shots.length < 2) return;
+  var i = 0;
+  setInterval(function(){
+    var live = shots.filter(function(im){ return !im.dataset.dead; });
+    if(live.length < 2) return;
+    var cur = live[i % live.length];
+    i++;
+    var next = live[i % live.length];
+    cur.classList.remove('on');
+    next.classList.add('on');
+  }, Math.max(3000, CONFIG.heroInterval|0));
+})();
+
+/* ── 3. Nav: sticky + aktiv sektion + progress ───────────── */
 (function(){
   var head = $('header'), bar = $('#progress');
   var links = $$('nav a[href^="#"]');
@@ -968,7 +1186,7 @@ var $$ = function(s,r){ return Array.prototype.slice.call((r||document).querySel
   onScroll();
 })();
 
-/* ── 3. Mobilmenu ────────────────────────────────────────── */
+/* ── 4. Mobilmenu ────────────────────────────────────────── */
 (function(){
   var b = $('#burger'), s = $('#sheet');
   if(!b || !s) return;
@@ -983,7 +1201,7 @@ var $$ = function(s,r){ return Array.prototype.slice.call((r||document).querySel
   document.addEventListener('keydown', function(e){ if(e.key === 'Escape') set(false); });
 })();
 
-/* ── 4. Reveal ved scroll (med sikkerhedsnet) ────────────── */
+/* ── 5. Reveal ved scroll (med sikkerhedsnet) ────────────── */
 (function(){
   var items = $$('.rv');
   function showAll(){ items.forEach(function(n){ n.classList.add('in'); }); }
@@ -998,7 +1216,6 @@ var $$ = function(s,r){ return Array.prototype.slice.call((r||document).querySel
   items.forEach(function(n){ io.observe(n); });
 
   // Sikkerhedsnet: intet indhold må nogensinde hænge usynligt fast.
-  // Alt over eller i viewporten afsløres ved hver scroll, og efter 4 sek. afsløres resten.
   function sweep(){
     var vh = window.innerHeight;
     items.forEach(function(n){
@@ -1012,7 +1229,7 @@ var $$ = function(s,r){ return Array.prototype.slice.call((r||document).querySel
   setTimeout(showAll, 4000);
 })();
 
-/* ── 5. Tælleanimation i "Arlberg i tal" ─────────────────── */
+/* ── 6. Tælleanimation i "Området" ───────────────────────── */
 (function(){
   var grid = $('#tal-grid');
   if(!grid) return;
@@ -1046,7 +1263,7 @@ var $$ = function(s,r){ return Array.prototype.slice.call((r||document).querySel
   }, {threshold:0.3});
   io.observe(grid);
 
-  // Samme sikkerhedsnet som ved reveal: tallene må aldrig stå og blinke "0".
+  // Samme sikkerhedsnet: tallene må aldrig stå og blinke "0".
   function sweep(){
     if(done) return;
     if(grid.getBoundingClientRect().top < window.innerHeight * 0.92){ once(); io.disconnect(); }
@@ -1056,10 +1273,10 @@ var $$ = function(s,r){ return Array.prototype.slice.call((r||document).querySel
   setTimeout(once, 4000);
 })();
 
-/* ── 6. Hero-parallax ────────────────────────────────────── */
+/* ── 7. Hero-parallax ────────────────────────────────────── */
 (function(){
-  var img = $('#heroimg');
-  if(!img || RM) return;
+  var box = $('#shots');
+  if(!box || RM) return;
   var busy = false;
   window.addEventListener('scroll', function(){
     if(busy) return;
@@ -1067,16 +1284,16 @@ var $$ = function(s,r){ return Array.prototype.slice.call((r||document).querySel
     requestAnimationFrame(function(){
       var y = window.pageYOffset || 0;
       if(y < window.innerHeight * 1.25){
-        img.style.transform = 'translate3d(0,' + (y * 0.24).toFixed(1) + 'px,0)';
+        box.style.transform = 'translate3d(0,' + (y * 0.24).toFixed(1) + 'px,0)';
       }
       busy = false;
     });
   }, {passive:true});
 })();
 
-/* ── 7. Billeder: pæn nødplan hvis en URL fejler ─────────── */
+/* ── 8. Billeder: pæn nødplan hvis en URL fejler ─────────── */
 (function(){
-  $$('img').forEach(function(im){
+  $$('#gal img').forEach(function(im){
     im.addEventListener('error', function(){
       im.classList.add('dead');
       im.setAttribute('data-broken','1');
@@ -1084,7 +1301,7 @@ var $$ = function(s,r){ return Array.prototype.slice.call((r||document).querySel
   });
 })();
 
-/* ── 8. Lightbox ─────────────────────────────────────────── */
+/* ── 9. Lightbox ─────────────────────────────────────────── */
 (function(){
   var cells = $$('#gal .cell');
   if(!cells.length) return;
@@ -1144,7 +1361,7 @@ var $$ = function(s,r){ return Array.prototype.slice.call((r||document).querySel
   });
 })();
 
-/* ── 9. Værelseslodtrækning ──────────────────────────────── */
+/* ── 10. Værelser: capi'ernes udmelding, eller en uofficiel lodtrækning ── */
 (function(){
   var cards = $$('#crewgrid .man');
   var beds  = $$('#beds .bed');
@@ -1209,10 +1426,8 @@ var $$ = function(s,r){ return Array.prototype.slice.call((r||document).querySel
     }, 80);
   }
 
-  // Er fordelingen aftalt? Så vises den — ellers står lodtrækningen klar.
   if(CONFIG.rooms && CONFIG.rooms.length){
     paint(CONFIG.rooms);
-    draw.textContent = 'Træk lod igen';
   } else {
     paint([[],[],[],[]]);
   }
@@ -1222,7 +1437,7 @@ var $$ = function(s,r){ return Array.prototype.slice.call((r||document).querySel
   });
 })();
 
-/* ── 10. Snefald ─────────────────────────────────────────── */
+/* ── 11. Snefald ─────────────────────────────────────────── */
 (function(){
   var c = $('#snow');
   if(!c || RM || !CONFIG.snow){ if(c) c.style.display = 'none'; return; }
@@ -1277,7 +1492,7 @@ var $$ = function(s,r){ return Array.prototype.slice.call((r||document).querySel
   });
 })();
 
-/* ── 11. Ticker: dublér rækken så loopet er sømløst ──────── */
+/* ── 12. Ticker: dublér rækken så loopet er sømløst ──────── */
 (function(){
   var rail = $('#rail');
   if(!rail) return;
