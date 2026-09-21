@@ -316,7 +316,7 @@ h1 em{
 
 /* ══════════ SECTIONS ══════════ */
 section{padding:clamp(70px,12vh,150px) var(--pad);position:relative;z-index:4}
-#crew,#burg,#rejse,#omraade,#events{scroll-margin-top:74px}
+#crew,#burg,#rejse,#omraade,#events,#prep{scroll-margin-top:84px}
 .head{
   display:grid;grid-template-columns:auto 1fr;gap:clamp(18px,4vw,54px);
   align-items:start;margin-bottom:clamp(38px,6vh,74px);
@@ -445,11 +445,11 @@ section{padding:clamp(70px,12vh,150px) var(--pad);position:relative;z-index:4}
   font-family:var(--mono);font-size:var(--fs-mono-xs);letter-spacing:.16em;text-transform:uppercase;
   color:var(--ice);margin-bottom:20px;
 }
-.panel ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px}
-.panel li{
+.panel ul,.prep-item ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px}
+.panel li,.prep-item li{
   position:relative;padding-left:21px;font-size:17px;line-height:1.55;color:var(--mute);
 }
-.panel li::before{
+.panel li::before,.prep-item li::before{
   content:'';position:absolute;left:0;top:.68em;width:9px;height:1px;background:var(--line-2);
 }
 .panel li b{color:var(--snow);font-weight:500}
@@ -597,6 +597,50 @@ section{padding:clamp(70px,12vh,150px) var(--pad);position:relative;z-index:4}
 .note-card p{margin:0;font-size:17.5px;line-height:1.62;color:var(--mute)}
 .note-card p b{color:var(--snow);font-weight:500}
 
+/* ══════════ HJEMMEARBEJDE — venlig henstilling før afrejse ══════════ */
+.prep{
+  margin-top:clamp(34px,5vh,62px);border:1px solid rgba(208,171,99,.34);border-radius:4px;
+  background:linear-gradient(180deg,#0F151D,#0A0E13);position:relative;overflow:hidden;
+}
+.prep::before{
+  content:'';position:absolute;inset:0 0 auto 0;height:2px;
+  background:linear-gradient(90deg,var(--brass),rgba(208,171,99,0));
+}
+.prep-head{padding:clamp(26px,3.4vw,46px) clamp(22px,3.4vw,46px) clamp(22px,2.8vw,34px)}
+.prep h4{
+  margin:0 0 16px;font-family:var(--display);font-weight:400;text-transform:uppercase;
+  font-size:clamp(29px,4.6vw,58px);line-height:.98;letter-spacing:-.005em;
+}
+.prep h4 em{font-style:normal;color:var(--brass)}
+.prep-head p{margin:0;max-width:62ch;font-size:clamp(17px,1.7vw,20.5px);line-height:1.62;color:var(--mute)}
+.prep-head p b{color:var(--snow);font-weight:500}
+.prep-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:1px;
+  background:var(--line);border-top:1px solid var(--line);
+}
+.prep-item{background:var(--night);padding:clamp(22px,2.6vw,32px)}
+.prep-item .i{
+  font-family:var(--mono);font-size:var(--fs-mono-sm);letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ice);margin-bottom:16px;
+}
+.prep-item p{margin:0 0 14px;font-size:17px;line-height:1.62;color:var(--mute)}
+.prep-item p:last-child{margin-bottom:0}
+.prep-item p b{color:var(--snow);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.chips span{
+  font-family:var(--mono);font-size:var(--fs-mono-xs);letter-spacing:.08em;text-transform:uppercase;
+  color:var(--snow);border:1px solid var(--line-2);border-radius:999px;padding:6px 12px;
+}
+.chips-label{
+  font-family:var(--mono);font-size:var(--fs-mono-xs);letter-spacing:.14em;text-transform:uppercase;
+  color:var(--mute-2);margin:4px 0 10px;
+}
+.prep-foot{
+  margin:0;padding:clamp(22px,2.8vw,32px) clamp(22px,3.4vw,46px);border-top:1px solid var(--line);
+  font-family:var(--display);text-transform:uppercase;font-size:clamp(21px,2.7vw,34px);line-height:1.1;
+}
+.prep-foot em{font-style:normal;color:var(--ice)}
+
 /* villages — 7 byer + en opsummering = 8 felter, så gitteret altid går op: 4×2, 2×4, 1×8 */
 .villages{
   display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;
@@ -646,7 +690,7 @@ section{padding:clamp(70px,12vh,150px) var(--pad);position:relative;z-index:4}
   transition:background .45s ease;display:flex;flex-direction:column;
 }
 .ev:hover{background:var(--slate)}
-.ev .badge{
+.ev .badge,.prep .badge{
   display:inline-block;font-family:var(--mono);font-size:var(--fs-mono-xs);letter-spacing:.18em;
   text-transform:uppercase;color:var(--brass);border:1px solid rgba(208,171,99,.42);
   border-radius:999px;padding:5px 12px;margin-bottom:20px;align-self:flex-start;
@@ -837,7 +881,7 @@ footer{
 <div class="ticker" aria-hidden="true">
   <div class="rail" id="rail">
     <span>SK601 · 07:55</span><span>Chauffør fra Zürich</span><span>Bilfri ankomst</span>
-    <span>Svævebanen 07–01</span><span>Tre timer på ski dag ét</span><span>Ski-in / ski-out</span>
+    <span>Svævebanen 07–01</span><span>Tre timer på ski dag ét</span><span>Dag 1-tøjet øverst i kufferten</span><span>Ski-in / ski-out</span>
     <span>Skileje i kælderen</span>
     <span>SAMINA-senge</span><span>Burg Oasis · 1.550 m²</span><span>Snekabine</span>
     <span>5-retters gourmetmenu</span><span>Fondue i Burg Schenke</span><span>Eisbar No.1</span>
@@ -1102,12 +1146,50 @@ footer{
   <div class="notes rv">
     <div class="note-card">
       <div class="when">Søndag · ankomst</div>
-      <p>Vi er i Lech omkring <b>kl. 12</b> og går direkte på ski — <b>tre timer på pisten</b>, før lifterne lukker. Skiene hentes hos Walch i kælderen på vejen, og bagagen finder selv op på værelset. Værelserne er forventeligt klar <b>kl. 16</b>.</p>
+      <p>Vi er i Lech omkring <b>kl. 12</b> og går direkte på ski — <b>tre timer på pisten</b>, før lifterne lukker. Vi skifter til skitøj i et rum, hotelchefen arrangerer, og skiene står forhåbentlig klar hos Walch. Bagagen kommer på værelserne, der forventeligt er klar <b>kl. 16</b>.</p>
     </div>
     <div class="note-card">
       <div class="when">Onsdag · afrejse</div>
       <p>Værelserne <b>skal forlades kl. 11</b>, men flyet går først <b>20:25</b>. Med bagagen i receptionen er der en hel skidag tilbage, før chaufføren henter os midt på eftermiddagen.</p>
     </div>
+  </div>
+
+  <!-- Venlig henstilling: det vi kan gøre hjemmefra, så vi hurtigt kommer på ski dag 1 -->
+  <div class="prep rv" id="prep">
+    <div class="prep-head">
+      <span class="badge">Venlig henstilling</span>
+      <h4>Dag 1-tøjet<br><em>øverst</em> i kufferten.</h4>
+      <p>Vi vil gerne hurtigt på ski. Inden bagagen ryger på værelserne, skifter vi til skitøj — <b>quick and dirty</b> — i et rum, som hotelchefen arrangerer. Så pak det, du skal bruge den første skidag, <b>øverst i kufferten</b>, så ingen skal grave sig ned gennem aftentøj og barbergrej, mens de andre står klar.</p>
+    </div>
+    <div class="prep-grid">
+      <div class="prep-item">
+        <div class="i">01 — Øverst i kufferten</div>
+        <ul>
+          <li>Skiundertøj og skisokker</li>
+          <li>Mellemlag eller fleece</li>
+          <li>Skibukser og skijakke</li>
+          <li>Handsker, hue eller buff</li>
+          <li>Skibriller og solbriller</li>
+          <li>Hjelm og egne støvler, hvis du har dem</li>
+          <li>Solcreme og læbepomade</li>
+        </ul>
+      </div>
+      <div class="prep-item">
+        <div class="i">02 — Skileje</div>
+        <p>Hotelchefen skriver snarest ud i vores <b>fælles Messenger-tråd</b>: hvem skal leje ski, og hvilket niveau ønsker du? Så kan skiene stå klar hos Walch, når vi ankommer — hvis hotellet og skiudlejningen kan nå det.</p>
+        <div class="chips-label">Hav det klar, når spørgsmålet kommer</div>
+        <div class="chips">
+          <span>Højde</span><span>Vægt</span><span>Alder</span>
+          <span>Skostørrelse</span><span>Hvor godt du kører</span><span>Ønsket skiklasse</span>
+        </div>
+      </div>
+      <div class="prep-item">
+        <div class="i">03 — Omklædning</div>
+        <p>Hotelchefen arrangerer et rum, hvor vi kan skifte, inden bagagen kommer på værelserne. Kufferten åbnes, dag 1-tøjet tages fra toppen, og så er vi ude.</p>
+        <p>Resten af kufferten venter på værelset, der forventeligt er klar <b>kl. 16</b> — samtidig med at lifterne lukker.</p>
+      </div>
+    </div>
+    <p class="prep-foot">Jo mere vi har preppet hjemmefra, jo hurtigere kommer vi på ski. <em>Og i afterski.</em></p>
   </div>
 </section>
 
@@ -1249,6 +1331,8 @@ footer{
     <div>
       <h6>Inden afgang</h6>
       <ul>
+        <li><a href="#prep"><b>Dag 1-tøjet øverst i kufferten</b></a></li>
+        <li>Svar på skileje i Messenger-tråden</li>
         <li><a href="https://www.burghotel-lech.com/de/burg/impressionen/#webcam" target="_blank" rel="noopener">Burgs webcam ↗</a></li>
         <li><a href="https://www.skiarlberg.at/en/lech-zuers/tickets-season-times/prices-tickets-winter" target="_blank" rel="noopener">Liftkort &amp; priser ↗</a></li>
         <li><a href="https://www.derweissering.ski/en" target="_blank" rel="noopener">Der Weiße Ring ↗</a></li>
